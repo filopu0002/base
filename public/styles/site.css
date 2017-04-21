@@ -5861,12 +5861,17 @@ body, html {
   #index section .container h3 {
     font-style: italic; }
   #index .content-scrolling-article {
-    background-color: #FAFAFA;
     color: #3d3536; }
-    #index .content-scrolling-article .post-article {
-      margin: 10px;
-      padding: 5px;
-      height: auto; }
+    #index .content-scrolling-article .article {
+      height: 420px;
+      margin-bottom: 20px; }
+      #index .content-scrolling-article .article .image-article {
+        width: 100%;
+        margin-bottom: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url("./../images/paris-tour-eiffel-at-night.jpg"); }
   #index .cover {
     background-image: url("./../images/header2-reduced.jpeg"); }
   #index .cover2 {

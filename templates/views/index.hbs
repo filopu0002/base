@@ -16,23 +16,25 @@
 		<div class="container">
 			<h3>- Nos derniers articles -</h3>
 			{{# each data.posts.results}}
-				<div class="col-sm-4 article">
+				<div class="col-sm-4">
+          <div class="article">
 
 					<!-- <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post"> -->
 						<a href="{{postUrl slug}}">
-							<div class="post-article" style="background-image: url('images/paris-tour-eiffel-at-night.jpg')" >
-								<h2>{{{title}}}</h2>
-								<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-									{{#if author.name.first}}by {{author.name.first}}{{/if}}
-								</p>
+							<div class="image-article">
 								<!-- {{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}} -->
-								<p>{{{content.brief}}}</p>
-								{{#if content.extended}}
-									<p class="read-more">Read more...</p>
-								{{/if}}
 							</div>
-						</a>
+              <h2>{{{title}}}</h2>
+              <p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+                {{#if author.name.first}}by {{author.name.first}}{{/if}}
+              </p>
+              <p>{{{content.brief}}}</p>
+              {{#if content.extended}}
+
+              {{/if}}
+            </a>
 					<!-- </div> -->
+        </div>
 				</div>
 				{{/each}}
 				<div class="col-sm-12">
