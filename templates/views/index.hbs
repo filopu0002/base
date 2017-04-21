@@ -1,21 +1,59 @@
 {{!< default}}
-<div class="container">
-	<div class="jumbotron">
-		<h1>Welcome</h1>
-		<p>This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.</p>
-		<p>
-			It includes the latest versions of
-			<a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		</p>
-		<p>Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.</p>
-		<hr>
-		<p>We have created a default Admin user for you with the email <strong>admin</strong> and the password <strong>admin</strong>.</p>
-		<p><a href="/keystone/signin" style="margin-right: 10px" class="btn btn-lg btn-primary">Sign in</a> to use the Admin UI.</p>
-		<hr>
-		<p>
-			Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			<a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
-		</p>
+<div id="index">
+	<div class="content-fixed cover">
+		<div class="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8.col-md-offset-2">
+						<h1>Welcome</h1>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+
+	<section class="content-scrolling content-scrolling-article">
+		<div class="container">
+			<h3>- Nos derniers articles -</h3>
+			{{# each data.posts.results}}
+				<div class="col-sm-4 article">
+
+					<!-- <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post"> -->
+						<a href="{{postUrl slug}}">
+							<div class="post-article" style="background-image: url('images/header2-reduced.jpeg')" >
+								<h2>{{{title}}}</h2>
+								<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+									{{#if author.name.first}}by {{author.name.first}}{{/if}}
+								</p>
+								<!-- {{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}} -->
+								<p>{{{content.brief}}}</p>
+								{{#if content.extended}}
+									<p class="read-more">Read more...</p>
+								{{/if}}
+							</div>
+						</a>
+					<!-- </div> -->
+				</div>
+				{{/each}}
+				<div class="col-sm-12">
+					<a href="/blog" class="btn btn-1"> <svg>
+      </svg>Découvrez le reste de nos articles </a>
+				</div>
+		</div>
+	</section>
+
+	<div class="content-fixed cover2">
+		<div class="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8.col-md-offset-2">
+						<h1>PART2</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="content-scrolling cd-color-3">
+
+	</section>
 </div>

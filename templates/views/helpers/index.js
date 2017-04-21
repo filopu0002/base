@@ -1,5 +1,5 @@
 var moment = require('moment');
-var _ = require('lodash');
+var _ = require('underscore');
 var hbs = require('handlebars');
 var keystone = require('keystone');
 var cloudinary = require('cloudinary');
@@ -36,7 +36,7 @@ module.exports = function () {
 	 */
 
 	// ### Date Helper
-	// A port of the Ghost Date formatter similar to the keystonejs - pug interface
+	// A port of the Ghost Date formatter similar to the keystonejs - jade interface
 	//
 	//
 	// *Usage example:*
@@ -96,7 +96,7 @@ module.exports = function () {
 		var output = '';
 
 		function createTagList (tags) {
-			var tagNames = _.map(tags, 'name');
+			var tagNames = _.pluck(tags, 'name');
 
 			if (autolink) {
 				return _.map(tags, function (tag) {
@@ -275,7 +275,7 @@ module.exports = function () {
 
 	//  ### Flash Message Helper
 	//  KeystoneJS supports a message interface for information/errors to be passed from server
-	//  to the front-end client and rendered in a html-block.  FlashMessage mirrors the Pug Mixin
+	//  to the front-end client and rendered in a html-block.  FlashMessage mirrors the Jade Mixin
 	//  for creating the message.  But part of the logic is in the default.layout.  Decision was to
 	//  surface more of the interface in the client html rather than abstracting behind a helper.
 	//

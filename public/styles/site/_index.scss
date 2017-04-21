@@ -1,0 +1,42 @@
+#index {
+	height: 100%;
+	position: relative;
+	z-index: 2;
+
+	section {
+		.container {
+			h1, h2, h3 {
+				text-align: center;
+				margin-bottom: 50px;
+			}
+			h3 {
+				font-style: italic;
+			}
+
+			button {}
+		}
+	}
+	.content-scrolling-article {
+		background-color: $blanc-2;
+		color: $marron;
+		.post-article {
+			margin: 10px;
+			padding: 5px;
+			height: auto;
+		}
+
+	}
+
+	.cover {
+		background-image: url("./../images/header2-reduced.jpeg");
+	}
+
+	.cover2 {
+		background-image: url("./../images/HeaderReduced.jpeg");
+	}
+
+	.cd-color-3 {
+		background-color: $vert-2;
+		color: $marron;
+	}
+}

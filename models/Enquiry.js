@@ -37,36 +37,23 @@ Enquiry.schema.post('save', function () {
 
 Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 	if (typeof callback !== 'function') {
-		callback = function (err) {
-			if (err) {
-				console.error('There was an error sending the notification email:', err);
-			}
-		};
+		callback = function () {};
 	}
-
-	if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
-		console.log('Unable to send email - no mailgun credentials provided');
-		return callback(new Error('could not find mailgun credentials'));
-	}
-
 	var enquiry = this;
-	var brand = keystone.get('brand');
-
-	keystone.list('User').model.find().where('isAdmin', true).exec(function (err, admins) {
+	keystone.list('Admin').model.find().where('isAdmin', true).exec(function (err, admins) {
 		if (err) return callback(err);
 		new keystone.Email({
+			templateExt: 'hbs',
+			templateEngine: require('express-handlebars'),
 			templateName: 'enquiry-notification',
-			transport: 'mailgun',
 		}).send({
 			to: admins,
 			from: {
-				name: 'site',
-				email: 'contact@site.com',
+				name: 'Mysite2',
+				email: 'contact@mysite2.com',
 			},
-			subject: 'New Enquiry for site',
+			subject: 'New Enquiry for Mysite2',
 			enquiry: enquiry,
-			brand: brand,
-			layout: false,
 		}, callback);
 	});
 };
