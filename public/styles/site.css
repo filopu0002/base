@@ -5851,6 +5851,9 @@ body, html {
   line-height: 1.6;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); }
 
+a:hover {
+  text-decoration: none; }
+
 #index {
   height: 100%;
   position: relative;
@@ -5870,8 +5873,7 @@ body, html {
         margin-bottom: 10px;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center center;
-        background-image: url("./../images/paris-tour-eiffel-at-night.jpg"); }
+        background-position: center center; }
   #index .cover {
     background-image: url("./../images/header2-reduced.jpeg"); }
   #index .cover2 {

@@ -16,26 +16,50 @@
 		<div class="container">
 			<h3>- Nos derniers articles -</h3>
 			{{# each data.posts.results}}
-				<div class="col-sm-4">
-          <div class="article">
+				{{#if @first}}
+				<div class="col-sm-12">
+					<div class="article">
 
 					<!-- <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post"> -->
 						<a href="{{postUrl slug}}">
 							<div class="image-article">
-								<!-- {{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}} -->
+								{{#if image}}<img src="{{{cloudinaryUrl image }}}">{{/if}}
 							</div>
-              <h2>{{{title}}}</h2>
-              <p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-                {{#if author.name.first}}by {{author.name.first}}{{/if}}
-              </p>
-              <p>{{{content.brief}}}</p>
-              {{#if content.extended}}
+							<h2>{{{title}}}</h2>
+							<!-- <p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+								{{#if author.name.first}}by {{author.name.first}}{{/if}}
+							</p> -->
+							<!-- <p>{{{content.brief}}}</p> -->
+							<!-- {{#if content.extended}}
 
-              {{/if}}
-            </a>
+							{{/if}} -->
+						</a>
 					<!-- </div> -->
-        </div>
 				</div>
+				</div>
+				{{else}}
+					<div class="col-sm-4">
+						<div class="article">
+
+						<!-- <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post"> -->
+							<a href="{{postUrl slug}}">
+								<div class="image-article">
+									{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="">{{/if}}
+								</div>
+								<h2>{{{title}}}</h2>
+								<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+									{{#if author.name.first}}by {{author.name.first}}{{/if}}
+								</p>
+								<p>{{{content.brief}}}</p>
+								{{#if content.extended}}
+
+								{{/if}}
+							</a>
+						<!-- </div> -->
+					</div>
+					</div>
+				{{/if}}
+
 				{{/each}}
 				<div class="col-sm-12">
 					<a href="/blog" class="btn btn-1"> <svg>
