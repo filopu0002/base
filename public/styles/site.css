@@ -5865,15 +5865,19 @@ a:hover {
     font-style: italic; }
   #index .content-scrolling-article {
     color: #3d3536; }
-    #index .content-scrolling-article .article {
+    #index .content-scrolling-article .main-article {
       height: 420px;
       margin-bottom: 20px; }
-      #index .content-scrolling-article .article .image-article {
-        width: 100%;
-        margin-bottom: 10px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center; }
+    #index .content-scrolling-article .image-article img {
+      width: 100%;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    #index .content-scrolling-article .text-article {
+      position: absolute;
+      top: 200px;
+      left: 0;
+      width: 100%; }
   #index .cover {
     background-image: url("./../images/header2-reduced.jpeg"); }
   #index .cover2 {

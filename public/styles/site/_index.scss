@@ -19,20 +19,36 @@
 	.content-scrolling-article {
 		//background-color: $blanc-2;
 		color: $marron;
-
-    .article{
+    .main-article{
       height: 420px;
       margin-bottom: 20px;
       //position: relative;
-      .image-article{
+
+    }
+    .image-article{
+    //  position: relative;
+
+      img{
         width: 100%;
-        margin-bottom: 10px;
+        background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center center; 
-        // background-image: url('./../images/paris-tour-eiffel-at-night.jpg')
+
       }
+      //width: 100%;
+      //position: absolute;
+      // margin-bottom: 10px;
+
+      // background-image: url('./../images/paris-tour-eiffel-at-night.jpg')
     }
+
+    .text-article{
+      position: absolute;
+      top: 200px;
+      left: 0;
+      width: 100%;
+    }
+
 	}
 
 	.cover {
