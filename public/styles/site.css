@@ -5851,6 +5851,9 @@ body, html {
   line-height: 1.6;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); }
 
+a:hover {
+  text-decoration: none; }
+
 #index {
   height: 100%;
   position: relative;
