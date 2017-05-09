@@ -42,30 +42,31 @@
   				</div>
         </div>
          {{else}}
+         <div class="col-sm-4">
+           <div class="article">
+
+           <!-- <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post"> -->
+            <a href="{{postUrl slug}}">
+               <div class="image-article">
+                 {{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="">{{/if}}
+               </div>
+               <h2>{{{title}}}</h2>
+               <p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+                 {{#if author.name.first}}by {{author.name.first}}{{/if}}
+               </p>
+               <p>{{{content.brief}}}</p>
+               {{#if content.extended}}
+
+               {{/if}}
+             </a>
+           <!-- </div> -->
+          </div>
+         </div>
         {{/if}}
       {{/each}}
 				<!-- -->
         <!-- <div class="row">
-					<div class="col-sm-4">
-						<div class="article"> -->
 
-						<!-- <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post"> -->
-							<!-- <a href="{{postUrl slug}}">
-								<div class="image-article">
-									{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="">{{/if}}
-								</div>
-								<h2>{{{title}}}</h2>
-								<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-									{{#if author.name.first}}by {{author.name.first}}{{/if}}
-								</p>
-								<p>{{{content.brief}}}</p>
-								{{#if content.extended}}
-
-								{{/if}}
-							</a> -->
-						<!-- </div> -->
-					<!-- </div>
-					</div>
         <div> -->
 
 
