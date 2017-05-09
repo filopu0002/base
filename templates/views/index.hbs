@@ -15,32 +15,25 @@
 	<section class="content-scrolling content-scrolling-article">
 		<div class="container">
 			<h3>- Nos derniers articles -</h3>
+			<div class="row">
 			{{# each data.posts.results}}
 				{{#if @first}}
-        <div class="row">
   				<div class="col-sm-12 main-article">
             <div class="image-article">
               {{#if image}}<img src="{{{cloudinaryUrl image }}}">{{/if}}
             </div>
   					<div class="text-article">
-
-  					<!-- <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post"> -->
-  						<a href="{{postUrl slug}}">
-
-
-  							<!-- <p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-  								{{#if author.name.first}}by {{author.name.first}}{{/if}}
-  							</p> -->
-  							<!-- <p>{{{content.brief}}}</p> -->
-  							<!-- {{#if content.extended}}
-
-  							{{/if}} -->
-  						</a>
-              <h2>{{{title}}}</h2>
-  					<!-- </div> -->
+							<div class="text-inter">
+	              <h1>{{{title}}}</h1>
+							 	<!-- <p>{{{content.brief}}}</p> -->
+								<!-- <div class="col-md-offset-5 col-sm-2 col-md-offset-5"> -->
+								<div class="button">
+									<a href="{{postUrl slug}}" class="button-article">Lire</a>
+								</div>
+							</div>
   				  </div>
   				</div>
-        </div>
+
          {{else}}
          <div class="col-sm-4">
            <div class="article">
@@ -54,16 +47,14 @@
                <p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
                  {{#if author.name.first}}by {{author.name.first}}{{/if}}
                </p>
-               <p>{{{content.brief}}}</p>
-               {{#if content.extended}}
-
-               {{/if}}
+               <p class="content-brief">{{{content.brief}}}</p>
              </a>
            <!-- </div> -->
           </div>
          </div>
         {{/if}}
       {{/each}}
+			</div>
 				<!-- -->
         <!-- <div class="row">
 

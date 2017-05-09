@@ -5859,25 +5859,40 @@ a:hover {
   position: relative;
   z-index: 2; }
   #index section .container h1, #index section .container h2, #index section .container h3 {
-    text-align: center;
-    margin-bottom: 50px; }
+    text-align: center; }
   #index section .container h3 {
     font-style: italic; }
-  #index .content-scrolling-article {
-    color: #3d3536; }
-    #index .content-scrolling-article .main-article {
-      height: 420px;
-      margin-bottom: 20px; }
-    #index .content-scrolling-article .image-article img {
+  #index .content-scrolling-article .main-article {
+    color: white;
+    height: 420px;
+    margin-bottom: 20px; }
+    #index .content-scrolling-article .main-article .image-article img {
       width: 100%;
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat; }
-    #index .content-scrolling-article .text-article {
+      min-height: 420px;
+      object-fit: cover; }
+    #index .content-scrolling-article .main-article .text-article {
       position: absolute;
-      top: 200px;
-      left: 0;
-      width: 100%; }
+      top: 10%;
+      left: 0; }
+      #index .content-scrolling-article .main-article .text-article .button {
+        display: flex;
+        justify-content: center;
+        margin-top: 220px; }
+        #index .content-scrolling-article .main-article .text-article .button .button-article {
+          color: white;
+          border: 2px;
+          border-style: solid;
+          border-color: white;
+          padding: 12px 30px 10px; }
+  #index .content-scrolling-article .image-article img {
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  #index .content-scrolling-article .text-article {
+    position: absolute;
+    left: 0;
+    width: 100%; }
   #index .cover {
     background-image: url("./../images/header2-reduced.jpeg"); }
   #index .cover2 {
