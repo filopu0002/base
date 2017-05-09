@@ -19,7 +19,9 @@ keystone.init({
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': '.hbs',
-
+  'wysiwyg menubar': true,
+  'wysiwyg additional options': { 'external_plugins': { 'uploadimage': '/js/uploadimage/test2.js' } },
+  'wysiwyg additional plugins': 'advlist, autolink, lists, link, image, charmap, print, preview, anchor, searchreplace, visualblocks, code, fullscreen, insertdatetime, media, table, contextmenu, paste, imagetools',
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
@@ -60,6 +62,11 @@ keystone.set('nav', {
 	enquiries: 'enquiries',
 	users: 'users',
 });
+
+keystone.set('cloudinary config', 'cloudinary://713151491398248:nEq9GsNWuMLcrR-kyoqyyf8ahH4@djr0jfahw' );
+keystone.set('cloudinary prefix', 'keystone');
+keystone.set('cloudinary folders', true);
+keystone.set('cloudinary secure', true);
 
 // Start Keystone to connect to your database and initialise the web server
 
