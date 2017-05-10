@@ -35,23 +35,35 @@
   				</div>
 
          {{else}}
-         <div class="col-sm-4">
-           <div class="article">
+         <div class="col-sm-6 col-md-4">
+          <a href="{{postUrl slug}}">
+            <div class="article">
+              <div class="image-article">
+                {{#if image}}<img src="{{{cloudinaryUrl image}}}" class="">{{/if}}
+              </div>
+              <div class="caption">
+                <h2>{{{title}}}</h2>
+                <p class="content-brief">{{{content.brief}}}</p>
+
+               <!-- <p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+                 {{#if author.name.first}}by {{author.name.first}}{{/if}}
+               </p> -->
+                <p></p>
+              </div>
+            </div>
+          </a>
 
            <!-- <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post"> -->
-            <a href="{{postUrl slug}}">
+
                <div class="image-article">
-                 {{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="">{{/if}}
+
+
                </div>
-               <h2>{{{title}}}</h2>
-               <p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-                 {{#if author.name.first}}by {{author.name.first}}{{/if}}
-               </p>
-               <p class="content-brief">{{{content.brief}}}</p>
-             </a>
+
+
+
            <!-- </div> -->
-          </div>
-         </div>
+        </div>
         {{/if}}
       {{/each}}
 			</div>
@@ -62,9 +74,8 @@
 
 
 
-				<div class="col-sm-12">
-					<a href="/blog" class="btn btn-1"> <svg>
-          </svg>Découvrez le reste de nos articles </a>
+				<div class="btnArticle">
+					<a href="/blog" class="btn">  Découvrez le reste de nos articles </a>
 				</div>
 		</div>
 	</section>

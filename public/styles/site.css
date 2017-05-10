@@ -5862,37 +5862,57 @@ a:hover {
     text-align: center; }
   #index section .container h3 {
     font-style: italic; }
-  #index .content-scrolling-article .main-article {
-    color: white;
-    height: 420px;
-    margin-bottom: 20px; }
-    #index .content-scrolling-article .main-article .image-article img {
-      width: 100%;
-      min-height: 420px;
-      object-fit: cover; }
-    #index .content-scrolling-article .main-article .text-article {
-      position: absolute;
-      top: 10%;
-      left: 0; }
-      #index .content-scrolling-article .main-article .text-article .button {
-        display: flex;
-        justify-content: center;
-        margin-top: 220px; }
-        #index .content-scrolling-article .main-article .text-article .button .button-article {
-          color: white;
-          border: 2px;
-          border-style: solid;
-          border-color: white;
-          padding: 12px 30px 10px; }
-  #index .content-scrolling-article .image-article img {
-    width: 100%;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat; }
-  #index .content-scrolling-article .text-article {
-    position: absolute;
-    left: 0;
-    width: 100%; }
+  #index .content-scrolling-article {
+    background-color: #f5f5f5; }
+    #index .content-scrolling-article .btnArticle {
+      display: flex;
+      justify-content: center; }
+      #index .content-scrolling-article .btnArticle .btn {
+        border: 1px solid white;
+        padding: 6px 12px;
+        background-color: white; }
+    #index .content-scrolling-article .main-article {
+      color: white;
+      height: 420px;
+      margin-bottom: 20px; }
+      #index .content-scrolling-article .main-article .image-article img {
+        width: 100%;
+        min-height: 420px;
+        object-fit: cover; }
+      #index .content-scrolling-article .main-article .text-article {
+        position: absolute;
+        width: 100%;
+        top: 10%;
+        left: 0; }
+        #index .content-scrolling-article .main-article .text-article .button {
+          display: flex;
+          justify-content: center;
+          margin-top: 220px; }
+          #index .content-scrolling-article .main-article .text-article .button .button-article {
+            color: white;
+            border: 2px;
+            border-style: solid;
+            border-color: white;
+            padding: 12px 30px 10px; }
+    #index .content-scrolling-article .article {
+      display: block;
+      height: 350px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      overflow: hidden; }
+      #index .content-scrolling-article .article .image-article {
+        overflow: hidden;
+        height: 200px;
+        background-color: #ddd;
+        margin: auto; }
+        #index .content-scrolling-article .article .image-article img {
+          display: block;
+          max-width: 100%;
+          height: auto;
+          margin-left: auto;
+          margin-right: auto; }
+      #index .content-scrolling-article .article .content-brief {
+        overflow: hidden; }
   #index .cover {
     background-image: url("./../images/header2-reduced.jpeg"); }
   #index .cover2 {
