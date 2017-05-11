@@ -5920,3 +5920,12 @@ a:hover {
   #index .cd-color-3 {
     background-color: #b4d7a8;
     color: #3d3536; }
+
+#destinations h1 {
+  text-align: center;
+  margin-bottom: 50px; }
+
+#destinations img {
+  width: 100%;
+  min-height: 420px;
+  object-fit: cover; }
