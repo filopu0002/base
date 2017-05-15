@@ -14,4 +14,6 @@ destinations.add({
 });
 
 
+destinations.relationship({ ref: 'destinations', path: 'Pays' });
+
 destinations.register();

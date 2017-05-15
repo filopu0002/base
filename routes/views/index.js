@@ -30,10 +30,10 @@ exports = module.exports = function(req, res) {
 
 			locals.data.posts = results;
 
-			console.log("------------ RESULT --------------", results);
+			// console.log("------------ RESULT --------------", results);
 			next(err);
 		});
-		console.log("------------ RESULT --------------", locals.data.results );
+		// console.log("------------ RESULT --------------", locals.data.results );
 	});
 	// Render the view
 	view.render('index');

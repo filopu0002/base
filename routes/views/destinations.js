@@ -8,8 +8,6 @@ exports = module.exports = function(req, res) {
 	// Set locals
 	locals.section = 'destinations';
 
-
-
 	// Render the view
 	view.render('destinations');
 };

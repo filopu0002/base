@@ -31,6 +31,20 @@ var routes = {
 	views: importRoutes('./views'),
 };
 
+keystone.set('404', function(req, res, next) {
+    res.notfound();
+});
+
+// Handle other errors
+keystone.set('500', function(err, req, res, next) {
+    var title, message;
+    if (err instanceof Error) {
+        message = err.message;
+        err = err.stack;
+    }
+    res.err(err, title, message);
+});
+
 // Setup Route Bindings
 exports = module.exports = function (app) {
 	// Views
@@ -40,6 +54,8 @@ exports = module.exports = function (app) {
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
 	app.get('/destinations', routes.views.destinations);
+	app.get('/destinationsPays', routes.views.destinationsPays);
+	app.get('/pays', routes.views.pays);
 	app.get('/a-propos', routes.views.aPropos);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:

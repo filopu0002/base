@@ -23,6 +23,7 @@ Post.add({
 	},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 	pays: { type: Types.Relationship, ref: 'Pays', many: true },
+	
 });
 
 Post.schema.virtual('content.full').get(function () {

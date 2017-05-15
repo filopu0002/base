@@ -17,6 +17,7 @@
 			<h3>- Nos derniers articles -</h3>
 			<div class="row">
 			{{# each data.posts.results}}
+
 				{{#if @first}}
   				<div class="col-sm-12 main-article">
             <div class="image-article">
@@ -35,6 +36,8 @@
   				</div>
 
          {{else}}
+				 {{debugger}}
+	 				{{log}}
          <div class="col-sm-6 col-md-4">
           <a href="{{postUrl slug}}">
             <div class="article">
