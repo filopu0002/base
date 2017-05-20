@@ -207,6 +207,10 @@ module.exports = function () {
 		return ('/blog/' + categorySlug);
 	};
 
+	_helpers.destinationsUrl = function (destinationsSlug, options) {
+		return ('/destinations/' + destinationsSlug);
+	};
+
 	// ### Pagination Helpers
 	// These are helpers used in rendering a pagination system for content
 	// Mostly generalized and with a small adjust to `_helper.pageUrl` could be universal for content types
