@@ -43,11 +43,15 @@ exports = module.exports = function(req, res) {
 
 	// Load the current category filter
 	view.on('init', function(next) {
-
+		console.log("1");
 		if (req.params.category) {
+			console.log("2");
 			keystone.list('PostCategory').model.findOne({
 				key: locals.filters.category
 			}).exec(function(err, result) {
+				console.log("3");
+				console.log("locals.filters.category", locals.filters.category);
+				console.log("locals.data.category", result);
 				locals.data.category = result;
 				next(err);
 			});
@@ -58,7 +62,7 @@ exports = module.exports = function(req, res) {
 
 	// Load the posts
 	view.on('init', function(next) {
-
+		console.log("4");
 		var q = keystone.list('Post').paginate({
 				page: req.query.page || 1,
 				perPage: 10,
@@ -71,10 +75,14 @@ exports = module.exports = function(req, res) {
 			.populate('author categories');
 
 		if (locals.data.category) {
+			console.log("5");
+			console.log("locals.data.category", locals.data.category);
 			q.where('categories').in([locals.data.category]);
 		}
 
 		q.exec(function(err, results) {
+			console.log("6");
+			console.log("RESULTS _______Q", results);
 			locals.data.posts = results;
 			next(err);
 		});

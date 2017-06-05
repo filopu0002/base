@@ -1,5 +1,6 @@
 var keystone = require('keystone');
 	Post = keystone.list('Post');
+	//Destinations = keystone.list('destinations');
 exports = module.exports = function(req, res) {
 
 	var view = new keystone.View(req, res);
@@ -13,11 +14,13 @@ exports = module.exports = function(req, res) {
 	locals.data = {
 		pays: [],
     destinations: [],
+		posts: [],
 	};
 
-	Post.model.find().where('author', author.id).exec(function(err, posts) {
-    // ...
-	});
+	Post.model.find().populate('pays').exec(function(err, post) {
+    // the author is a fully populated User document
+
+});
 
 
  	//Continents
@@ -47,19 +50,19 @@ exports = module.exports = function(req, res) {
 				},
 			})
 			.sort('-publishedDate')
-			.populate('author');
+			.populate('pays');
 
 		q.exec(function(err, results) {
 
 			locals.data.posts = results;
 
-			console.log("------------ RESULT --------------", results);
+			//console.log("------------ RESULT --------------", results);
 			next(err);
 		});
 		// console.log("------------ RESULT --------------", locals.data.results );
 	});
 
-console.log("------------ RESULT --------------", locals.data.destinations );
+//console.log("------------ RESULT --------------", locals.data.destinations );
 
 	// Render the view
 	view.render('destinations');

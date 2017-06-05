@@ -115,6 +115,33 @@ module.exports = function () {
 		return new hbs.SafeString(output);
 	};
 
+	_helpers.paysList = function (pays, options) {
+		var autolink = _.isString(options.hash.autolink) && options.hash.autolink === 'false' ? false : true;
+		var separator = _.isString(options.hash.separator) ? options.hash.separator : ', ';
+		var prefix = _.isString(options.hash.prefix) ? options.hash.prefix : '';
+		var suffix = _.isString(options.hash.suffix) ? options.hash.suffix : '';
+		var output = '';
+
+		function createTagList (tags) {
+			var tagNames = _.pluck(tags, 'name');
+
+			if (autolink) {
+				return _.map(tags, function (tag) {
+					return linkTemplate({
+						url: ('/blog/' + tag.key),
+						text: _.escape(tag.name),
+					});
+				}).join(separator);
+			}
+			return _.escape(tagNames.join(separator));
+		}
+
+		if (pays && pays.length) {
+			output = prefix + createTagList(pays) + suffix;
+		}
+		return new hbs.SafeString(output);
+	};
+
 	/**
 	 * KeystoneJS specific helpers
 	 * ===========================
