@@ -22,6 +22,7 @@ exports = module.exports = function(req, res) {
 	var destinationsTab = {};
 	var contintentId = 0;
 	var continentName = null;
+	var postsContinent = [];
 	  // charge le continent sélectionné :
 	view.on('init', function(next) {
 
@@ -34,52 +35,33 @@ exports = module.exports = function(req, res) {
 			next(err);
 		});
 
-
-		// modelDestinations.model.find()
-		// .exec(function(err, results) {
-		//
-		// 	console.log("results", results);
-		// 	destinationsTab = results;
-		// 	searchIdDestinations();
-		//
-		// 	next(err);
-		// });
 	});
 
 
-	function create(next) {
-
-	}
-
-	function searchIdDestinations(){
-		console.log("LLLLLL", destinationsTab)
-		for(var i=0; i < destinationsTab.length; i++){
-			console.log("locals.filters.destinations -->", locals.filters.destinations);
-			if(destinationsTab[i].key == locals.filters.destinations){
-				console.log("TRUE");
-				contintentId = destinationsTab[i]._id;
-				break;
-			}
-		}
-	}
-
-
-	//function searchPaysEqualsToId(){
-
-	//}
-
+	// function create(next) {
+	//
+	// }
+	//
+	// function searchIdDestinations(){
+	// 	//console.log("LLLLLL", destinationsTab)
+	// 	for(var i=0; i < destinationsTab.length; i++){
+	// 		//console.log("locals.filters.destinations -->", locals.filters.destinations);
+	// 		if(destinationsTab[i].key == locals.filters.destinations){
+	// 			//console.log("TRUE");
+	// 			contintentId = destinationsTab[i]._id;
+	// 			break;
+	// 		}
+	// 	}
+	// }
 
 	//Cherche pays par rappport au continent
 	view.on('init', function(next){
 		var q = keystone.list('Pays').model.find().populate('continent');
-		console.log("destinationsTab", locals.data.continent);
-		//q.where('continent').in([locals.data.continent]);
-
+		//console.log("destinationsTab", locals.data.continent);
+		q.where('continent').in([locals.data.continent]);
 		q.exec(function(err, results) {
-      console.log("================ ----> ", results[1]);
-			locals.data.paysSelect = results[1];
+			console.log(" Pays with continent---->", results)
 			locals.data.pays = results;
-
 			next(err);
 		});
 	});
@@ -88,25 +70,53 @@ exports = module.exports = function(req, res) {
 	//Cherche articles par rapport au continent en passant par les pays du continent
 	// Peut etre ajouter le continent dans l'article ?
 	view.on('init', function(next) {
+		var pays = [];
 
-		// var q = keystone.list('Post').model.find()
-		// 	.sort('-publishedDate')
-		// 	.populate('pays');
+		var q = keystone.list('Post').model.find()
+			.sort('-publishedDate')
+			.populate('pays');
 
-		//q.where('pays').in([locals.data.paysSelect]);
+		q.exec(function(err, results) {
 
+			if(locals.data.pays){
+				for(var j=0; j < results.length; j++){
+					for(i=0; i < locals.data.pays.length; i++){
 
-		//search
+						if(results[j].pays[0] && locals.data.pays[i].name == results[j].pays[0].name){
+							console.log("results Post pays =", results[j].pays[0].name);
+							console.log("results pays =",locals.data.pays[i].name );
+							postsContinent.push(results[j]);
+							pays.push(locals.data.pays[i]);
+						}
+					}
+				}
+				console.log(postsContinent);
+				locals.data.posts = postsContinent;
 
-		keystone.list('Post').model.find().where('pays').in([locals.data.paysSelect]).exec(function(err, results) {
-			console.log("------------ RESULT --------------", results);
+				//Supprime les pays en double du aux posts
+				function removeDuplicates(originalArray, prop) {
+					 var newArray = [];
+					 var lookupObject  = {};
+
+					 for(var i in originalArray) {
+							lookupObject[originalArray[i][prop]] = originalArray[i];
+					 }
+
+					 for(i in lookupObject) {
+							 newArray.push(lookupObject[i]);
+					 }
+						return newArray;
+				}
+
+				var uniqueArray = removeDuplicates(pays, "_id");
+				uniqueArray.sort();
+				locals.data.pays = uniqueArray;
+			}
+			else{
+				locals.data.posts = results;
+			}
 			next(err);
 		});
-		// q.exec(function(err, results) {
-		// 	locals.data.posts = results;
-		// 	console.log("------------ RESULT --------------", results);
-		// 	next(err);
-		// });
 	});
 
 

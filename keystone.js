@@ -63,10 +63,10 @@ keystone.set('nav', {
 	users: 'users',
 });
 
-keystone.set('cloudinary config', 'cloudinary://713151491398248:nEq9GsNWuMLcrR-kyoqyyf8ahH4@djr0jfahw' );
-keystone.set('cloudinary prefix', 'keystone');
-keystone.set('cloudinary folders', true);
-keystone.set('cloudinary secure', true);
+// keystone.set('cloudinary config', 'cloudinary://713151491398248:nEq9GsNWuMLcrR-kyoqyyf8ahH4@djr0jfahw' );
+// keystone.set('cloudinary prefix', 'keystone');
+// keystone.set('cloudinary folders', true);
+// keystone.set('cloudinary secure', true);
 
 // Start Keystone to connect to your database and initialise the web server
 

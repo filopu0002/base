@@ -12,6 +12,8 @@ exports = module.exports = function(req, res) {
 	};
 	locals.data = {
 		posts: [],
+		continent: [],
+		pays: [],
 	};
 
 	// Load the current post
@@ -24,15 +26,39 @@ exports = module.exports = function(req, res) {
 
 		q.exec(function(err, result) {
 			console.log('result', result);
+
 			locals.data.post = result;
+			if(locals.data.post.pays && locals.data.post.pays[0]){
+				locals.data.pays = locals.data.post.pays[0].key;
+			}
 			next(err);
 		});
 
 	});
 
+	view.on('init', function(next){
+		console.log('init');
+		if(locals.data.post.pays && locals.data.post.pays[0]){
+			var q = keystone.list('Pays').model.findOne({
+				key: locals.data.pays,
+			}).populate('continent');
+			//console.log("destinationsTab", locals.data.continent);
+
+			q.exec(function(err, result) {
+				console.log('continent ===================', result.continent);
+				locals.data.continent = result.continent;
+				next(err);
+			});
+		}
+		else{
+			next();
+		}
+	});
+
+
 	// Load other posts
 	view.on('init', function(next) {
-
+		console.log("Load other posts");
 		var q = keystone.list('Post').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit('4');
 
 		q.exec(function(err, results) {

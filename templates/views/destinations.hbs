@@ -10,19 +10,17 @@
     </div>
   </div>
   <div class="container">
-    {{# each data.destinations.results}}
-      <h2>{{{name}}}</h2>
-      <div class="row">
+    <div class="row">
+      {{# each data.pays}}
         <div class="col-sm-5 col-md-3">
-         <!-- <a href="{{postUrl slug}}"> -->
+         <a href="{{destinationsUrl key}}">
            <div class="article">
              <div class="image-article">
-               <!-- {{#if image}}<img src="{{{cloudinaryUrl image}}}" class="">{{/if}} -->
+               {{#if image}}<img src="{{{cloudinaryUrl image}}}" class="">{{/if}}
              </div>
              <div class="caption">
                <!-- <h2>{{{title}}}</h2> -->
-               <h2>Sud</h2>
-               <h4> Categories : {{{categories}}} </h4>
+               <h2>{{{name}}}</h2>
                <!-- <p class="content-brief">{{{content.brief}}}</p> -->
                <p class="content-brief">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci ex, vestibulum at velit id, semper finibus lorem. Proin et libero sit amet massa iaculis fringilla mattis sit amet velit. Maecenas mollis diam lectus, vel consequat turpis sagittis quis. Etiam vitae libero sed felis malesuada tristique a id dolor. </p>
 
@@ -32,11 +30,9 @@
                <p></p>
              </div>
       		 </div>
+          </a>
       	</div>
-      </div>
-      <div class="btnArticle">
-        <a href="{{destinationsUrl key}}" class="btn">Articles sur l'{{{key}}}</a>
-      </div>
-    {{/each}}
+      {{/each}}
+    </div>
   </div>
 </div>

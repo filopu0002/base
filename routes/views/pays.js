@@ -12,33 +12,36 @@ exports = module.exports = function(req, res) {
 	};
 	locals.data = {
 		pays: [],
+		posts: [],
 	};
 
-	// Load the current post
+	// Load the current pays
 	view.on('init', function(next) {
 
-		var q = keystone.list('Pays').model.find();
-    console.log("Q ----> ", q);
-		q.exec(function(err, results) {
-      console.log("================ ----> ", results);
-			locals.data.pays = results;
+		var q = keystone.list('Pays').model.findOne({
+		    key: locals.filters.pays,
+		});
+
+		q.exec(function(err, result) {
+			console.log("locals.filters.pays", locals.filters.pays);
+			locals.data.pays = result;
 			next(err);
 		});
 
 	});
+	view.on('init', function(next) {
 
-	// Load other posts
-	// view.on('init', function(next) {
-  //
-	// 	var q = keystone.list('Post').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit('4');
-  //
-	// 	q.exec(function(err, results) {
-	// 		locals.data.posts = results;
-	// 		next(err);
-	// 	});
-  //
-	// });
+		var q = keystone.list('Post').model.find()
+			.sort('-publishedDate')
+			.populate('pays');
 
+		q.where('pays').in([locals.data.pays]);
+		q.exec(function(err, results) {
+ 			console.log("RESULTS PAYS --->", results);
+			locals.data.posts = results;
+			next(err);
+		});
+});
 	// Render the view
 	view.render('pays');
 };

@@ -4,11 +4,15 @@
 			<article>
 				<hr>
 				<header>
+
 					<h1>{{data.post.title}}</h1>
 					<h5>
 						{{{categoryList data.post.categories prefix="Posted in "}}}
 						{{#if author.name.first}}by {{author.name.first}}{{/if}}
-						{{{paysList data.post.pays prefix="Pays :"}}}
+
+						<a href="{{destinationsUrl data.pays}}"> {{data.pays}}
+						</a>
+
 					</h5>
 				</header>
 				<div class="post">

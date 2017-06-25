@@ -238,6 +238,24 @@ module.exports = function () {
 		return ('/destinations/' + destinationsSlug);
 	};
 
+	// _helpers.paysUrl = function (paysKey, destinationsSlug,options) {
+	// 	return ('/destinations/'+ destinationsSlug.data.continent.key + '/' + paysKey );
+	// };
+	_helpers.paysUrl = function (paysKey,options) {
+		return ('/destinations/' + paysKey );
+	};
+
+	// _helpers.paysPostList = function (destinationsSlug, paysKey,options) {
+	// 	if(destinationsSlug && paysKey){
+	// 		return ('/destinations/'+ destinationsSlug + '/' + paysKey );
+	// 	}
+	// 	else{
+	// 		return  ('/blog/');
+	// 	}
+	// };
+
+
+
 	// ### Pagination Helpers
 	// These are helpers used in rendering a pagination system for content
 	// Mostly generalized and with a small adjust to `_helper.pageUrl` could be universal for content types

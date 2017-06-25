@@ -16,7 +16,8 @@ Post.add({
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	image: { type: Types.CloudinaryImage,  folder: 'path/to/image' ,select : true, selectPrefix: 'path/to/images' },
+	//image: { type: Types.CloudinaryImage,  folder: 'path/to/image' ,select : true, selectPrefix: 'path/to/images' },
+	image: { type: Types.CloudinaryImage, select : true},
 	content: {
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
