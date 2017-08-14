@@ -1,5 +1,5 @@
 var keystone = require('keystone');
-
+var Types = keystone.Field.Types;
 /**
  * PostCategory Model
  * ==================
@@ -11,6 +11,7 @@ var destinations = new keystone.List('destinations', {
 
 destinations.add({
 	name: { type: String, required: true },
+	image: { type: Types.CloudinaryImage, select : true},
 });
 
 

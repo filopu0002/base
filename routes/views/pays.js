@@ -38,6 +38,7 @@ exports = module.exports = function(req, res) {
 		q.where('pays').in([locals.data.pays]);
 		q.exec(function(err, results) {
  			console.log("RESULTS PAYS --->", results);
+			console.log("locals.data.pays -->", locals.data.pays);
 			locals.data.posts = results;
 			next(err);
 		});

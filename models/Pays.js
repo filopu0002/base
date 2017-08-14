@@ -11,6 +11,8 @@ var Pays = new keystone.List('Pays', {
 
 Pays.add({
 	name: { type: String, required: true },
+	image: { type: Types.CloudinaryImage, select : true},
+	descriptions: {type: Types.Html, wysiwyg: true, height: 400 },
 	continent: { type: Types.Relationship, ref: 'destinations'},
 });
 

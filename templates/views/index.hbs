@@ -21,13 +21,11 @@
 				{{#if @first}}
   				<div class="col-sm-12 main-article">
             <div class="image-article">
-              {{#if image}}<img src="{{{cloudinaryUrl image }}}">{{/if}}
+              {{#if image}}<img class="image-ar" src="{{{cloudinaryUrl image }}}">{{/if}}
             </div>
   					<div class="text-article">
 							<div class="text-inter">
 	              <h1>{{{title}}}</h1>
-							 	<!-- <p>{{{content.brief}}}</p> -->
-								<!-- <div class="col-md-offset-5 col-sm-2 col-md-offset-5"> -->
 								<div class="button">
 									<a href="{{postUrl slug}}" class="button-article">Lire</a>
 								</div>
@@ -42,7 +40,7 @@
           <a href="{{postUrl slug}}">
             <div class="article">
               <div class="image-article">
-                {{#if image}}<img src="{{{cloudinaryUrl image}}}" class="">{{/if}}
+                {{#if image}}<img class="image-ar" src="{{{cloudinaryUrl image}}}">{{/if}}
               </div>
               <div class="caption">
                 <h2>{{{title}}}</h2>

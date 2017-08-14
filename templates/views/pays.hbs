@@ -1,13 +1,29 @@
 <div id='pays'>
+	<div class="container-fluid cover-pays-main">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="cover-pays">
+					<div class="title-before element-center">
+						<div class="title">
+							{{data.pays.name}}
+						</div>
+					</div>
+	        <div class='image-pays'>
+						<div class="image-pa" style="background-image:url({{{cloudinaryUrl data.pays.image}}})"> </div>
+	          <!-- {{#if data.pays.image}}<img src="{{{cloudinaryUrl data.pays.image}}}" class="image-pa">{{/if}} -->
+	        </div>
+				</div>
+			</div>
+		</div>
+	</div>
   <div class="container">
-    <h2>{{data.pays.name}}</h2>
     <div class="row">
       {{# each data.posts}}
         <div class="col-sm-5 col-md-3">
           <a href="{{postUrl slug}}">
             <div class="article">
               <div class="image-article">
-                {{#if image}}<img src="{{{cloudinaryUrl image}}}" class="">{{/if}}
+                {{#if image}}<img src="{{{cloudinaryUrl image}}}" class="image-ar">{{/if}}
                 </div>
                 <div class="caption">
                 <!-- <h2>{{{title}}}</h2> -->

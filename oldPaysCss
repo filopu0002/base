@@ -1,0 +1,104 @@
+#pays{
+  height: 100%;
+// float: left;
+// width: 100%;
+  #banner {
+    background-color: #80A4D3;
+    height: 100%;
+    margin: 0 auto 0 auto;
+    margin-top: -133px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0 20px;
+    -webkit-transition: height ease 20s;
+    transition: height ease 20s;
+  }
+
+  .cover {
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-attachment: fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+  }
+.center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  // .cover-pays{
+  //   height : 600px;
+  //   // img { height: 420px; background-color: #444;}
+  //
+  // 	//  img[class] {
+  // 	// 	 width: 100%;
+  // 	//  }
+  //    .image-pays{
+  //     //  height: 420px;
+  //     //  background-color: #ddd;
+  //     //  margin: auto;
+  //
+  //     width: 100%;
+  //     height: 500px;
+  //     display: block;
+  //     overflow: hidden;
+  //     position: relative;
+  //     background-color: #000;
+  //     opacity: 1;
+  //     z-index: 0;
+  //      .image-pa{
+  //  		// 	object-fit: cover;
+  //  		// 	min-height: 420px;
+  //
+  //
+  //       position: absolute;
+  //       top: 0;
+  //       left: 0;
+  //       width: 100%;
+  //       height: 100%;
+  //       // animation: round 15s infinite;
+  //       // -webkit-animation-name: round;
+  //       // -webkit-animation-duration: 15s;
+  //       // -webkit-animation-iteration-count: infinite;
+  //       // opacity: 0;
+  //       background-size: cover;
+  //       background-position: center;
+  //  		}
+  //    }
+  // }
+  .cover {
+		//background-image: url("./../images/header2-reduced.jpeg");
+	}
+}
+
+
+
+<!-- <div class="container-fluid cover-pays">
+ <div class="row">
+   <div class="col-md-12"> -->
+         <div id="banner" class="section clear center cover" style="background-image:url({{{cloudinaryUrl data.pays.image}}})"> </div>
+
+     <!-- <span class='image-pays'> -->
+       <!-- {{#if data.pays.image}}<img src="{{{cloudinaryUrl data.pays.image}}}" class="image-pa">{{/if}} -->
+     <!-- </span> -->
+     <h2>{{data.pays.name}}</h2>
+   <!-- </div>
+ </div>
+</div> -->

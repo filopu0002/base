@@ -5826,6 +5826,10 @@ body, html {
   height: 100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
+h1, .h1, h2, .h2, h3, .h3 {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important; }
+
 #main {
   height: 100%;
   margin-top: 50px; }
@@ -5851,6 +5855,20 @@ body, html {
   line-height: 1.6;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); }
 
+.element-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
 a:hover {
   text-decoration: none; }
 
@@ -5862,14 +5880,27 @@ a:hover {
     padding: 6px 12px;
     background-color: white; }
 
+.image-ar {
+  object-fit: cover; }
+
 .main-article {
+  display: block;
   color: white;
   height: 420px;
-  margin-bottom: 20px; }
-  .main-article .image-article img {
-    width: 100%;
-    min-height: 420px;
-    object-fit: cover; }
+  margin-bottom: 20px;
+  overflow: hidden; }
+  .main-article img {
+    height: 420px;
+    background-color: #444; }
+  .main-article img[class] {
+    width: 100%; }
+  .main-article .image-article {
+    height: 420px;
+    background-color: #ddd;
+    margin: auto; }
+    .main-article .image-article .image-ar {
+      object-fit: cover;
+      min-height: 420px; }
   .main-article .text-article {
     position: absolute;
     width: 100%;
@@ -5892,17 +5923,18 @@ a:hover {
   margin-bottom: 20px;
   background-color: #fff;
   overflow: hidden; }
+  .article img {
+    height: 200px;
+    background-color: #444; }
+  .article img[class] {
+    width: 100%; }
   .article .image-article {
     overflow: hidden;
     height: 200px;
     background-color: #ddd;
     margin: auto; }
-    .article .image-article img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin-left: auto;
-      margin-right: auto; }
+    .article .image-article .image-ar {
+      object-fit: cover; }
   .article .content-brief {
     overflow: hidden; }
 
@@ -5931,7 +5963,71 @@ a:hover {
 #destinations h2 {
   text-align: center; }
 
-#destinations img {
-  width: 100%;
-  min-height: 420px;
-  object-fit: cover; }
+#destinations .map {
+  margin-bottom: 50px; }
+  #destinations .map img {
+    width: 100%;
+    min-height: 420px;
+    object-fit: cover; }
+
+#destinations .block-pays {
+  margin-bottom: 50px; }
+  #destinations .block-pays .pays {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    height: 200px;
+    background-color: #ddd;
+    margin: auto; }
+    #destinations .block-pays .pays .title-before {
+      color: #fff;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      font-size: 19px;
+      position: absolute;
+      -webkit-transition: all ease 0.8s;
+      transition: all ease 0.8s; }
+    #destinations .block-pays .pays img {
+      height: 200px;
+      background-color: #444; }
+    #destinations .block-pays .pays img[class] {
+      width: 100%; }
+  #destinations .block-pays .pays:hover {
+    background: rgba(0, 0, 0, 0.41);
+    -webkit-transition: all ease 0.8s;
+    transition: all ease 0.8s; }
+
+#pays .cover-pays-main {
+  height: 600px; }
+  #pays .cover-pays-main .cover-pays .title-before {
+    color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 19px;
+    position: absolute;
+    -webkit-transition: all ease 0.8s;
+    transition: all ease 0.8s; }
+    #pays .cover-pays-main .cover-pays .title-before .title {
+      font-size: 45px;
+      z-index: 4; }
+  #pays .cover-pays-main .cover-pays .image-pays {
+    width: 100%;
+    height: 500px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    opacity: 1;
+    z-index: 0; }
+    #pays .cover-pays-main .cover-pays .image-pays .image-pa {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center; }
