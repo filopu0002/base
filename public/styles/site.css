@@ -5919,24 +5919,29 @@ a:hover {
 
 .article {
   display: block;
-  height: 350px;
+  height: 450px;
   margin-bottom: 20px;
   background-color: #fff;
   overflow: hidden; }
   .article img {
-    height: 200px;
+    height: 250px;
     background-color: #444; }
   .article img[class] {
     width: 100%; }
   .article .image-article {
     overflow: hidden;
-    height: 200px;
+    height: 250px;
     background-color: #ddd;
     margin: auto; }
     .article .image-article .image-ar {
       object-fit: cover; }
-  .article .content-brief {
-    overflow: hidden; }
+  .article .caption {
+    height: 200px; }
+    .article .caption .content-brief {
+      margin: 15px;
+      text-align: justify;
+      overflow: hidden;
+      height: 110px; }
 
 #index {
   height: 100%;
@@ -6031,3 +6036,57 @@ a:hover {
       height: 100%;
       background-size: cover;
       background-position: center; }
+
+.post-page .cover {
+  overflow: hidden;
+  padding-bottom: 55%; }
+  .post-page .cover img {
+    position: fixed;
+    object-fit: cover;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translateX(-50%); }
+  .post-page .cover .title {
+    font-size: 5em;
+    color: #fff;
+    position: fixed;
+    top: 40%;
+    height: 50vh;
+    width: 100%;
+    text-align: center; }
+
+.post-page .icon {
+  position: absolute;
+  padding: 20px 0 20px 0;
+  width: 100vh;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  bottom: 0;
+  font-size: 50px; }
+
+.post-page .content-scrolling-post {
+  padding: 1% 0;
+  position: relative;
+  background: #f5f5f5;
+  box-shadow: 0px -10px 60px rgba(0, 0, 0, 0.25);
+  height: 100%; }
+  .post-page .content-scrolling-post .container {
+    margin: 0 auto; }
+    .post-page .content-scrolling-post .container .post {
+      margin-left: auto;
+      margin-right: auto;
+      width: 720px; }
+      .post-page .content-scrolling-post .container .post p {
+        font-size: 1.3em;
+        line-height: 1.6;
+        padding-bottom: 20px; }
+      .post-page .content-scrolling-post .container .post img {
+        object-fit: cover;
+        width: 100%;
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        top: 50;
+        left: 0; }

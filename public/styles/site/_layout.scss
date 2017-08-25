@@ -129,7 +129,7 @@ div{
 }
 .article{
   display: block;
-  height: 350px;
+  height: 450px;
   //padding: 4px;
   margin-bottom: 20px;
   //line-height: 1.42857;
@@ -137,14 +137,14 @@ div{
   //border: 1px solid #ddd;
   // border-radius: 4px;
   overflow: hidden;
-	img { height: 200px; background-color: #444;}
+	img { height: 250px; background-color: #444;}
 
 	img[class] {
 	  width: 100%;
 	}
   .image-article{
     overflow: hidden;
-    height: 200px;
+    height: 250px;
     background-color: #ddd;
     margin: auto;
 		.image-ar{
@@ -159,8 +159,19 @@ div{
     //   margin-right: auto;
     // }
   }
-  .content-brief{
-    overflow: hidden;
-  }
+	.caption{
+		height: 200px;
+		.content-brief{
+
+			margin: 15px;
+			text-align:justify;
+			overflow: hidden;
+			height: 110px;
+		}
+		.place-date{
+			
+		}
+	}
+
 
 }

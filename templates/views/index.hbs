@@ -12,7 +12,7 @@
 		</div>
 	</div>
 
-	<section class="content-scrolling content-scrolling-article">
+	<section class="content-scrolling">
 		<div class="container">
 			<h3>- Nos derniers articles -</h3>
 			<div class="row">
@@ -34,8 +34,6 @@
   				</div>
 
          {{else}}
-				 {{debugger}}
-	 				{{log}}
          <div class="col-sm-6 col-md-4">
           <a href="{{postUrl slug}}">
             <div class="article">
@@ -45,36 +43,21 @@
               <div class="caption">
                 <h2>{{{title}}}</h2>
                 <p class="content-brief">{{{content.brief}}}</p>
-
+								<div class="place-date">
+									<span class="place">Lieu</span>
+									<span class="date"> 23 juillet 2016 </span>
+								</div>
                <!-- <p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-                 {{#if author.name.first}}by {{author.name.first}}{{/if}}
+
                </p> -->
                 <p></p>
               </div>
             </div>
           </a>
-
-           <!-- <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post"> -->
-
-               <div class="image-article">
-
-
-               </div>
-
-
-
-           <!-- </div> -->
         </div>
         {{/if}}
       {{/each}}
 			</div>
-				<!-- -->
-        <!-- <div class="row">
-
-        <div> -->
-
-
-
 				<div class="btnArticle">
 					<a href="/blog" class="btn">  Découvrez le reste de nos articles </a>
 				</div>
