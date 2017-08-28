@@ -9,6 +9,15 @@ h1, .h1, h2, .h2, h3, .h3 {
     margin-bottom: 0px !important;
 }
 
+//Phone
+@media (min-width: 576px) {  }
+//Tablet
+@media (min-width: 768px) {  }
+//Desktop
+@media (min-width: 992px) { }
+//Large desktop
+@media (min-width: 1200px) { }
+
 
 #main {
 	height:100%;
@@ -169,7 +178,7 @@ div{
 			height: 110px;
 		}
 		.place-date{
-			
+
 		}
 	}
 
