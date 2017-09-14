@@ -6058,7 +6058,13 @@ a:hover {
     transition: all ease 0.8s; }
 
 #pays .cover-pays-main {
-  height: 600px; }
+  margin-bottom: 40px; }
+  @media (min-width: 1200px) {
+    #pays .cover-pays-main {
+      height: 650px; } }
+  @media (max-width: 1199px) {
+    #pays .cover-pays-main {
+      height: 500px; } }
   #pays .cover-pays-main .cover-pays .title-before {
     color: #fff;
     top: 0;
@@ -6071,16 +6077,22 @@ a:hover {
     transition: all ease 0.8s; }
     #pays .cover-pays-main .cover-pays .title-before .title {
       font-size: 45px;
-      z-index: 4; }
+      z-index: 4;
+      text-transform: uppercase; }
   #pays .cover-pays-main .cover-pays .image-pays {
     width: 100%;
-    height: 500px;
     display: block;
     overflow: hidden;
     position: relative;
-    background-color: #000;
+    background-color: #444;
     opacity: 1;
     z-index: 0; }
+    @media (min-width: 1200px) {
+      #pays .cover-pays-main .cover-pays .image-pays {
+        height: 650px; } }
+    @media (max-width: 1199px) {
+      #pays .cover-pays-main .cover-pays .image-pays {
+        height: 500px; } }
     #pays .cover-pays-main .cover-pays .image-pays .image-pa {
       position: absolute;
       top: 0;
@@ -6089,6 +6101,12 @@ a:hover {
       height: 100%;
       background-size: cover;
       background-position: center; }
+
+#pays .title-pays {
+  text-align: center; }
+
+#pays .container.articles {
+  padding-top: 30px; }
 
 #pays .article {
   height: 460px; }
@@ -6141,7 +6159,8 @@ a:hover {
       top: 40%;
       height: 50vh;
       width: 100%;
-      text-align: center; }
+      text-align: center;
+      text-transform: uppercase; }
   .post-page .icon {
     position: absolute;
     padding: 20px 0 20px 0;
