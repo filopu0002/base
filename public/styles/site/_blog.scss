@@ -1,0 +1,50 @@
+.blog{
+  line-height: 1.6;
+  .article{
+    height: 460px;
+
+    // font-family: brandon,Helvetica-Neue,Helvetica,Arial,sans-serif;
+
+  	img { height: 200px; background-color: #444;}
+
+  	img[class] {
+  	  width: 100%;
+  	}
+    .image-article{
+    position: relative;
+
+      height: 200px;
+  		.image-ar{
+        margin-bottom: 30px;
+  		}
+    }
+
+    .title{
+      text-align: left;
+      margin-bottom: 5px;
+      color: #008fb8;
+    }
+  	.caption{
+      font-size: 13px;
+      a{
+        color: #737373;
+      }
+      a:hover{
+        color: #737373;
+      }
+  		.place-date{
+        text-align: right;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 11px;
+        margin-bottom: 15px;
+  		}
+
+      line-height: 2;
+  	}
+
+    .more{
+      text-transform: uppercase;
+    }
+  }
+}

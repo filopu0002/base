@@ -1,34 +1,57 @@
-<div class="container">
-	<h1>Blog</h1>
-</div>
-<div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-md-9">
-			<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>
-			<div class="blog">
-				{{# each data.posts.results}}
-				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-					<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
-					<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-							{{#if author.name.first}}by {{author.name.first}}{{/if}}
-					</p>
-					{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
-					<p>{{{content.brief}}}</p>
-					{{#if content.extended}}<p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>{{/if}}
-				</div>
-				{{/each}}
-			</div>
-		</div>
-		<div class="col-sm-4 col-md-3">
-			<h2>Categories</h2>
-			<div style="margin-top: 70px;" class="list-group">
-				<a href="/blog" class="active list-group-item">All Categories</a>
-				{{# each data.categories }}
-				<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
-				{{/each}}
-			</div>
-		</div>
+<div class="blog">
+	<div class="container">
+		<h1>Blog</h1>
 	</div>
+	<div class="container">
+		<div class="row">
+				<!-- <h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4> -->
+
+					{{# each data.posts.results}}
+						  <div class="col-sm-5 col-md-3">
+
+
+		            <div class="article">
+									<a href="{{postUrl slug}}" class="image-article">
+		                {{#if image}}<img class="image-ar" src="{{{cloudinaryUrl image}}}">{{/if}}
+		              </a>
+									<div class="title">
+											<a href="{{postUrl slug}}"> <h3>{{{title}}}</h3> </a>
+									</div>
+
+		              <div class="caption">
+
+										<div class="place-date">
+											{{{categoryList categories }}}
+											<span class="date"> 23 juillet 2016 </span>
+										</div>
+										<div class="content-brief">
+											<a href="{{postUrl slug}}">
+												{{{content.brief}}}
+											</a>
+										</div>
+										<div class="more">
+											<a href="{{postUrl slug}}">
+												<span class="button-more"> Lire la suite</span>
+											</a>
+										</div>
+		              </div>
+		            </div>
+		          </a>
+
+						</div>
+						{{/each}}
+			</div>
+			<!-- <div class="col-sm-4 col-md-3">
+				<h2>Categories</h2>
+				<div style="margin-top: 70px;" class="list-group">
+					<a href="/blog" class="active list-group-item">All Categories</a>
+					{{# each data.categories }}
+					<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
+					{{/each}}
+				</div>
+			</div> -->
+		</div>
+
 	{{debug}}
 	{{>pagination}}
 </div>

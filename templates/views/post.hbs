@@ -2,10 +2,16 @@
 	<div class="cover" id="coverPost">
     	{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image }}}">{{/if}}
 			<div class="title"> {{data.post.title}} </div>
+
 	</div>
 
-	<div class="icon"> | </div>
-	<section class="content-scrolling-post">
+	<a class="icon" id="icon" href="#">
+
+			<span class="arrow arrow-1"></span>
+			<span class="arrow arrow-2"></span>
+
+	</a>
+	<section class="content-scrolling-post" id="content-post">
 		<!-- <div class="container"> -->
 			<!-- <div class="row">
 				<div class="col-sm-2 col-md-12"> -->
@@ -32,3 +38,6 @@
 		<!-- </div> -->
 	</section>
 </div>
+
+
+<script src="/js/zoom.js"></script>
