@@ -6090,6 +6090,38 @@ a:hover {
       background-size: cover;
       background-position: center; }
 
+#pays .article {
+  height: 460px; }
+  #pays .article img {
+    height: 200px;
+    background-color: #444; }
+  #pays .article img[class] {
+    width: 100%; }
+  #pays .article .image-article {
+    position: relative;
+    height: 200px; }
+    #pays .article .image-article .image-ar {
+      margin-bottom: 30px; }
+  #pays .article .title {
+    text-align: left;
+    margin-bottom: 5px;
+    color: #008fb8; }
+  #pays .article .caption {
+    font-size: 13px;
+    line-height: 2; }
+    #pays .article .caption a {
+      color: #737373; }
+    #pays .article .caption a:hover {
+      color: #737373; }
+    #pays .article .caption .place-date {
+      text-align: right;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 11px;
+      margin-bottom: 15px; }
+  #pays .article .more {
+    text-transform: uppercase; }
+
 .post-page {
   height: 100%; }
   .post-page .cover {
