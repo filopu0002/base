@@ -1,5 +1,15 @@
 .blog{
   line-height: 1.6;
+
+  .container.title{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    h1, h3{
+      text-align: center;
+    }
+
+  }
+
   .article{
     height: 460px;
 

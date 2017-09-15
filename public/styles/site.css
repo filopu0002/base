@@ -5909,21 +5909,34 @@ h1, .h1, h2, .h2, h3, .h3 {
   justify-content: center; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-duration: .3s;
+  -moz-transition-duration: .3s;
+  -webkit-transition-duration: .3s;
+  -o-transition-duration: .3s; }
 
 a:hover {
   text-decoration: none; }
 
 .button-more {
-  color: #000;
+  color: #3e3e3e !important;
   font-size: 11px;
   padding: 5px 14px;
-  border: 1px solid #000;
+  border: 1px solid #071c2c;
   background: transparent;
   border-radius: 0;
   letter-spacing: 1px;
   box-shadow: none;
-  font-weight: 600; }
+  font-weight: 600;
+  transition: background-color .4s,color .35s; }
+
+.button-more:hover {
+  background: #071c2c;
+  color: white !important; }
 
 .btnArticle {
   display: flex;
@@ -5938,7 +5951,7 @@ a:hover {
 
 .main-article {
   display: block;
-  color: white;
+  color: white !important;
   height: 420px;
   margin-bottom: 20px;
   overflow: hidden; }
@@ -5967,43 +5980,76 @@ a:hover {
         color: white;
         border: 2px;
         border-style: solid;
-        border-color: white;
-        padding: 12px 30px 10px; }
+        border-color: #white;
+        padding: 12px 80px 10px; }
+      .main-article .text-article .button .button-article:hover {
+        background: #071c2c;
+        color: white !important;
+        border-color: #071c2c; }
 
 .article {
   display: block;
-  height: 450px;
+  height: 460px;
   margin-bottom: 20px;
   background-color: #fff;
   overflow: hidden; }
   .article img {
-    height: 250px;
+    height: 200px;
     background-color: #444; }
   .article img[class] {
     width: 100%; }
   .article .image-article {
     overflow: hidden;
-    height: 250px;
+    height: 200px;
     background-color: #ddd;
     margin: auto; }
     .article .image-article .image-ar {
-      object-fit: cover; }
+      object-fit: cover;
+      margin-bottom: 30px; }
+  .article .title {
+    margin-bottom: 5px; }
+    .article .title a {
+      color: #008fb8; }
+    .article .title a:hover {
+      color: #3e3e3e; }
   .article .caption {
+    font-size: 13px;
+    line-height: 2;
     height: 200px; }
+    .article .caption a {
+      color: #737373; }
+    .article .caption a:hover {
+      color: #737373; }
     .article .caption .content-brief {
-      font-size: 13px;
       text-align: justify;
       overflow: hidden;
       height: 110px; }
+      .article .caption .content-brief .content {
+        font-family: Graphik, sans-serif !important; }
+    .article .caption .place-date {
+      text-align: right;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 11px;
+      margin-bottom: 15px; }
+    .article .caption .more {
+      text-transform: uppercase; }
+      .article .caption .more a {
+        color: #008fb8; }
+      .article .caption .more a:hover {
+        color: #3e3e3e; }
 
 #index {
   height: 100%;
   position: relative;
   z-index: 2; }
-  #index section .container h1, #index section .container h2, #index section .container h3 {
-    text-align: center; }
-  #index section .container h3 {
-    font-style: italic; }
+  #index section .container h1, #index section .container h2 {
+    text-align: center;
+    color: #071c2c;
+    font-size: 2.25em;
+    font-weight: 500;
+    letter-spacing: .9px;
+    line-height: 1.25; }
   #index .content-scrolling-article {
     background-color: #f5f5f5; }
   #index .cover {
@@ -6013,6 +6059,10 @@ a:hover {
   #index .cd-color-3 {
     background-color: #b4d7a8;
     color: #3d3536; }
+  #index .text-inter h1 {
+    color: white !important; }
+  #index .title-article-index h2 {
+    padding-bottom: 30px; }
 
 #destinations h1 {
   text-align: center;
@@ -6121,9 +6171,7 @@ a:hover {
     #pays .article .image-article .image-ar {
       margin-bottom: 30px; }
   #pays .article .title {
-    text-align: left;
-    margin-bottom: 5px;
-    color: #008fb8; }
+    margin-bottom: 5px; }
   #pays .article .caption {
     font-size: 13px;
     line-height: 2; }
@@ -6195,12 +6243,18 @@ a:hover {
       width: 100%;
       position: relative;
       margin-top: 50px;
-      margin-bottom: 100px;
+      margin-bottom: 50px;
+      border-radius: 10px;
       top: 50;
       left: 0; }
 
 .blog {
   line-height: 1.6; }
+  .blog .container.title {
+    padding-top: 50px;
+    padding-bottom: 30px; }
+    .blog .container.title h1, .blog .container.title h3 {
+      text-align: center; }
   .blog .article {
     height: 460px; }
     .blog .article img {

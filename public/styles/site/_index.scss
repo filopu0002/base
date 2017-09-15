@@ -5,13 +5,14 @@
 
 	section {
 		.container {
-			h1, h2, h3 {
+			h1, h2{
 				text-align: center;
+				color: #071c2c;
+		    font-size: 2.25em;
+		    font-weight: 500;
+		    letter-spacing: .9px;
+		    line-height: 1.25;
 			}
-			h3 {
-				font-style: italic;
-			}
-
 
 		}
 	}
@@ -35,5 +36,15 @@
 	.cd-color-3 {
 		background-color: $vert-2;
 		color: $marron;
+	}
+	.text-inter{
+		h1{
+			color: white !important;
+		}
+	}
+	.title-article-index{
+		h2{
+			padding-bottom: 30px;
+		}
 	}
 }

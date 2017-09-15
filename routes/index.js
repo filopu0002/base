@@ -32,9 +32,6 @@ var routes = {
 };
 
 keystone.set('404', function(req, res, next) {
-		console.log("REQ -------------------------------------", req);
-		console.log("**************************** res ******************************", res);
-
     res.notfound();
 });
 

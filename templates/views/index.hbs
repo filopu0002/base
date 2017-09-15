@@ -14,7 +14,7 @@
 
 	<section class="content-scrolling">
 		<div class="container">
-			<h3>- Nos derniers articles -</h3>
+			<span class="title-article-index"><h2> Nos derniers articles </h2></span>
 			<div class="row">
 			{{# each data.posts.results}}
 
@@ -35,25 +35,32 @@
 
          {{else}}
          <div class="col-sm-6 col-md-4">
-          <a href="{{postUrl slug}}">
-            <div class="article">
-              <div class="image-article">
-                {{#if image}}<img class="image-ar" src="{{{cloudinaryUrl image}}}">{{/if}}
-              </div>
-              <div class="caption">
-                <h2>{{{title}}}</h2>
-                <p class="content-brief">{{{content.brief}}}</p>
-								<div class="place-date">
-									<span class="place">Lieu</span>
-									<span class="date"> 23 juillet 2016 </span>
-								</div>
-               <!-- <p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
 
-               </p> -->
-                <p></p>
-              </div>
-            </div>
-          </a>
+					 <div class="article">
+	 					<a href="{{postUrl slug}}" class="image-article">
+	 						{{#if image}}<img class="image-ar" src="{{{cloudinaryUrl image}}}">{{/if}}
+	 					</a>
+	 					<div class="title">
+	 							<a href="{{postUrl slug}}"> <h3>{{{title}}}</h3> </a>
+	 					</div>
+
+	 					<div class="caption">
+
+	 						<div class="place-date">
+	 							{{{categoryList categories }}}
+	 							<span class="date"> 23 juillet 2016 </span>
+	 						</div>
+	 						<div class="content-brief">
+	 							<a href="{{postUrl slug}}">
+	 								<span class="content"> {{{content.brief}}} </span>
+	 							</a>
+	 						</div>
+	 						<div class="more">
+	 							<a href="{{postUrl slug}}" class="button-more"> Lire la suite <i class="fa fa-long-arrow-right"></i>
+	 							</a>
+	 						</div>
+	 					</div>
+	 				</div>
         </div>
         {{/if}}
       {{/each}}
