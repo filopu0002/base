@@ -32,6 +32,9 @@ var routes = {
 };
 
 keystone.set('404', function(req, res, next) {
+		console.log("REQ -------------------------------------", req);
+		console.log("**************************** res ******************************", res);
+
     res.notfound();
 });
 
@@ -57,7 +60,7 @@ exports = module.exports = function (app) {
 	//app.get('/destinations/:destinations', routes.views.continent);
 	app.get('/destinations/:pays', routes.views.pays);
 	app.get('/a-propos', routes.views.aPropos);
-
+	app.get('/404', routes.views.error404);
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 

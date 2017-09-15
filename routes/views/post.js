@@ -28,7 +28,7 @@ exports = module.exports = function(req, res) {
 			console.log('result', result);
 
 			locals.data.post = result;
-			if(locals.data.post.pays && locals.data.post.pays[0]){
+			if(locals.data.post!= null && locals.data.post.pays!= null && locals.data.post.pays[0]){
 				locals.data.pays = locals.data.post.pays[0].key;
 			}
 			next(err);
@@ -38,7 +38,7 @@ exports = module.exports = function(req, res) {
 
 	view.on('init', function(next){
 		console.log('init');
-		if(locals.data.post.pays && locals.data.post.pays[0]){
+		if(locals.data.post != null && locals.data.post.pays != null && locals.data.post.pays[0]){
 			var q = keystone.list('Pays').model.findOne({
 				key: locals.data.pays,
 			}).populate('continent');
@@ -51,7 +51,7 @@ exports = module.exports = function(req, res) {
 			});
 		}
 		else{
-			next();
+			res.redirect('/404');
 		}
 	});
 
@@ -63,6 +63,7 @@ exports = module.exports = function(req, res) {
 
 		q.exec(function(err, results) {
 			locals.data.posts = results;
+			console.log("resuls ------------------------", results);
 			next(err);
 		});
 

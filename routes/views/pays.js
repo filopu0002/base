@@ -13,9 +13,10 @@ exports = module.exports = function(req, res) {
 	locals.data = {
 		pays: [],
 		posts: [],
+		type: [],
 	};
 
-	// Load the current pays
+	// Load the current country
 	view.on('init', function(next) {
 
 		var q = keystone.list('Pays').model.findOne({
@@ -23,25 +24,41 @@ exports = module.exports = function(req, res) {
 		});
 
 		q.exec(function(err, result) {
-			console.log("locals.filters.pays", locals.filters.pays);
-			locals.data.pays = result;
-			next(err);
+
+			if(result!= null){
+				locals.data.pays = result;
+
+
+				//manage the type before the name of country
+				if(result.type ==  'sans' ){
+					locals.data.type = "";
+				}
+				else{
+					locals.data.type = result.type + " ";
+				}
+				next(err);
+			}
+			else{
+				res.redirect('/404');
+			}
 		});
 
 	});
-	view.on('init', function(next) {
+
+	//Loads articles
+	view.on('init', function(next, res) {
 
 		var q = keystone.list('Post').model.find()
 			.sort('-publishedDate')
 			.populate('pays');
+			q.where('pays').in([locals.data.pays]);
+			q.exec(function(err, results) {
+				// 	console.log("RESULTS PAYS --->", results);
+				// console.log("locals.data.pays -->", locals.data.pays);
+				locals.data.posts = results;
+				next(err);
+			});
 
-		q.where('pays').in([locals.data.pays]);
-		q.exec(function(err, results) {
- 			console.log("RESULTS PAYS --->", results);
-			console.log("locals.data.pays -->", locals.data.pays);
-			locals.data.posts = results;
-			next(err);
-		});
 });
 	// Render the view
 	view.render('pays');

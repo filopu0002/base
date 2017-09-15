@@ -8,6 +8,7 @@
  * modules in your project's /lib directory.
  */
 var _ = require('lodash');
+keystone = require('keystone');
 
 
 /**
@@ -18,6 +19,7 @@ var _ = require('lodash');
 	or replace it with your own templates / logic.
 */
 exports.initLocals = function (req, res, next) {
+	var locals = res.locals;
 	res.locals.navLinks = [
 		{ label: 'Home', key: 'home', href: '/' },
 		{ label: 'Destinations', key: 'destinations', href: '/destinations' },
@@ -29,7 +31,26 @@ exports.initLocals = function (req, res, next) {
 	res.locals.user = req.user;
 	next();
 };
+exports.initErrorHandlers = function(req, res, next) {
 
+    res.err = function(err, title, message) {
+        res.status(500).render('errors/500', {
+            err: err,
+            errorTitle: title,
+            errorMsg: message
+        });
+    }
+
+    res.notfound = function(title, message) {
+        res.status(404).render('errors/404', {
+            errorTitle: title,
+            errorMsg: message
+        });
+    }
+
+    next();
+
+};
 
 /**
 	Fetches and clears the flashMessages before a view is rendered

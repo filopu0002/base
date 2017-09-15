@@ -33,11 +33,35 @@
 							{{{data.post.content.extended}}}
 						</div>
 					</article>
+					{{#if data}}
+					  <script type="text/javascript">
+					    var postUrl = 'http://immensebase1,herokuapp.com/blog/post/{{data.post.slug}}';
+					    var postSlug = '{{data.post.slug}}';
+					  </script>
+					{{/if}}
+
+					<div id="disqus_thread"></div>
+					<script>
+					/*
+					var disqus_config = function () {
+					this.page.url = postUrl;  // Replace PAGE_URL with your page's canonical URL variable
+					this.page.identifier = postSlug; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					};
+					*/
+					(function() { // DON'T EDIT BELOW THIS LINE
+					var d = document, s = d.createElement('script');
+					s.src = 'https://test-h81hogqc00.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+					})();
+					</script>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 				<!-- </div>
 			</div> -->
 		<!-- </div> -->
 	</section>
 </div>
+
 
 
 <script src="/js/zoom.js"></script>
