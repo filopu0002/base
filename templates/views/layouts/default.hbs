@@ -77,13 +77,11 @@
 
 	<script type="text/javascript">
 	var feed = new Instafeed({
-		get: 'user',
-		userId: '37460794',
-		filter: function(image) {
-			return image.tags.indexOf('TAG_NAME') >= 0;
-		}
-		});
-		feed.run();
+			get: 'tagged',
+			tagName: '',
+			clientId: 'c9aadc865e2643ab87b2e4fd1d4f94a1'
+	});
+	feed.run();
 	</script>
 	{{{isAdminEditorJS user}}}
 </body>
