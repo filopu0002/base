@@ -81,11 +81,12 @@
 				</div>
 				<div id="instafeed"></div>
 				<script type="text/javascript">
-				var userFeed = new Instafeed({
-				  get: 'user',
-				  userId: '37460794'
+				var feed = new Instafeed({
+				    get: 'tagged',
+				    tagName: '',
+				    clientId: 'c9aadc865e2643ab87b2e4fd1d4f94a1'
 				});
-				userFeed.run();
+				feed.run();
 				</script>
 			</div>
 		</div>
