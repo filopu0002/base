@@ -76,12 +76,14 @@
 	<script src="/js/insta.js"></script>
 
 	<script type="text/javascript">
-		var userFeed = new Instafeed({
-			get: 'user',
-			userId: '37460794',
-			accessToken: '37460794.c9aadc8.a2b34f53c98c4d19a10ecd5f8182e25a'
-			});
-		userFeed.run();
+	var feed = new Instafeed({
+		get: 'user',
+		userId: '37460794',
+		filter: function(image) {
+			return image.tags.indexOf('TAG_NAME') >= 0;
+		}
+		});
+		feed.run();
 	</script>
 	{{{isAdminEditorJS user}}}
 </body>
