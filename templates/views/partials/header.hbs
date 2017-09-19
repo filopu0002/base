@@ -1,15 +1,15 @@
-<div id="header">
-  <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+<header class="navbar navbar-default navbar-fixed-top nav-down">
+  <nav role="navigation" >
     <div class="container">
       <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">----LOGO------</a>
+      <a href="/" class="navbar-brand">Deux baroudeurs</a>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
             {{# each navLinks}}
-            <li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+            <li {{#ifeq ../section key}}{{else}}{{/ifeq}}>
               <a href="{{ href }}">{{ label }}</a>
             </li>
           {{/each}}
@@ -17,4 +17,4 @@
       </div>
     </div>
   </nav>
-</div>
+</header>

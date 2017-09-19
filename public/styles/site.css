@@ -5826,13 +5826,62 @@ body, html {
   height: 100%;
   font: 14px "Fanwood Text",brandon,Helvetica-Neue,Helvetica,Arial,sans-serif; }
 
+header {
+  position: fixed;
+  top: 0;
+  transition: top 0.2s ease-in-out; }
+  @media (min-width: 768px) {
+    header {
+      height: 40px;
+      width: 100%; } }
+
+.navbar {
+  transition: top 0.2s ease-in-out;
+  transition: background-color 0.2s linear;
+  color: #071c2c;
+  display: block;
+  font-family: brandon,Helvetica-Neue,Helvetica,Arial,sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    .navbar {
+      background-color: transparent;
+      border-color: transparent; } }
+  .navbar a {
+    text-align: left; }
+    @media (max-width: 767px) {
+      .navbar a {
+        text-align: center; } }
+  @media (max-width: 767px) {
+    .navbar .navbar-collapse {
+      padding-top: 50px !important;
+      overflow-y: unset !important; } }
+  .navbar .navbar-brand {
+    font-size: 1.50em; }
+    @media (max-width: 1023px) {
+      .navbar .navbar-brand {
+        padding: 15px 0px;
+        font-size: 1.20em; } }
+
+@media (min-width: 768px) {
+  .navbar-fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: top 0.2s ease-in-out;
+    transition: background-color 0.2s linear; } }
+
+.nav-up {
+  top: -60px;
+  transition: top 0.2s ease-in-out; }
+
 h1, .h1, h2, .h2, h3, .h3 {
   margin-top: 0px !important;
   margin-bottom: 0px !important; }
 
 #main {
-  height: 100%;
-  margin-top: 50px; }
+  height: 100%; }
 
 #footer {
   margin-top: 30px;
@@ -5841,6 +5890,11 @@ h1, .h1, h2, .h2, h3, .h3 {
   color: #777777;
   position: relative;
   z-index: 1; }
+
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+  .mobile {
+    width: 50%;
+    float: left; } }
 
 .arrow {
   opacity: 0;
@@ -5879,20 +5933,36 @@ h1, .h1, h2, .h2, h3, .h3 {
   70% {
     opacity: 1; } }
 
-.content-fixed {
+.content-fixed-1 {
   min-height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
   @media (min-width: 992px) {
-    .content-fixed {
+    .content-fixed-1 {
       background-attachment: fixed; } }
+
+.parallax-container {
+  position: relative;
+  height: 300px; }
+
+.parallax {
+  position: absolute;
+  height: 300%;
+  width: 100%;
+  z-index: -1; }
+
+.content-scrool-fixed {
+  padding-top: 50px;
+  height: auto;
+  background-color: white; }
 
 .content-scrolling {
   min-height: 30%;
   padding: 4em 0;
   line-height: 1.6;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  background-color: white; }
 
 .element-center {
   display: -webkit-box;
@@ -6060,13 +6130,26 @@ a:hover {
     background-color: #b4d7a8;
     color: #3d3536; }
   #index .text-inter h1 {
-    color: white !important; }
+    color: white !important;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    -webkit-text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    -moz-text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3); }
   #index .title-article-index h2 {
     padding-bottom: 30px; }
+  #index .last-photos img {
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    margin-bottom: 35px; }
 
-#destinations h1 {
-  text-align: center;
-  margin-bottom: 50px; }
+#destinations .title-top {
+  margin-bottom: 50px !important; }
+  #destinations .title-top h1 {
+    text-align: center;
+    margin-top: 90px !important;
+    margin-bottom: 15px !important; }
 
 #destinations h2 {
   text-align: center; }
@@ -6194,8 +6277,10 @@ a:hover {
     overflow: hidden;
     min-height: 100%; }
     .post-page .cover img {
+      width: 100%;
       position: fixed;
       object-fit: cover;
+      top: 0%;
       left: 50%;
       min-height: 100%;
       min-width: 100%;
@@ -6208,7 +6293,10 @@ a:hover {
       height: 50vh;
       width: 100%;
       text-align: center;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+      -webkit-text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+      -moz-text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3); }
   .post-page .icon {
     position: absolute;
     padding: 20px 0 20px 0;

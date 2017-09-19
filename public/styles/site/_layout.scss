@@ -4,6 +4,74 @@ body,html {
 	font: 14px "Fanwood Text",brandon,Helvetica-Neue,Helvetica,Arial,sans-serif;
 }
 
+
+  header{
+		@media (min-width: 768px) {
+      height: 40px;
+			  width: 100%;
+		}
+      position: fixed;
+      top: 0;
+      transition: top 0.2s ease-in-out;
+
+  }
+
+	.navbar{
+		transition: top 0.2s ease-in-out;
+		transition: background-color 0.2s linear;
+		@media (min-width: 768px) {
+			background-color: transparent;
+	    border-color: transparent;
+
+		}
+
+		color: #071c2c;
+    display: block;
+    font-family: brandon,Helvetica-Neue,Helvetica,Arial,sans-serif;
+    font-size: 1.125em;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    //padding: 1em 0;
+    text-decoration: none;
+    text-transform: uppercase;
+		a{
+    	text-align: left;
+			@media (max-width: 767px) {
+				text-align: center
+			}
+		}
+		.navbar-collapse {
+			@media (max-width: 767px) {
+				padding-top: 50px !important;
+				overflow-y: unset !important;
+			}
+		}
+		.navbar-brand{
+			font-size: 1.50em;
+			@media (max-width: 1023px) {
+				padding: 15px 0px ;
+				font-size: 1.20em;
+			}
+		}
+
+	}
+
+
+
+		.navbar-fixed-top.scrolled {
+			@media (min-width: 768px) {
+			  background-color: #fff !important;
+				transition: top 0.2s ease-in-out;
+			  transition: background-color 0.2s linear;
+
+		}
+	}
+
+  .nav-up {
+      top: -60px;
+			transition: top 0.2s ease-in-out;
+  }
+
 h1, .h1, h2, .h2, h3, .h3 {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
@@ -21,8 +89,10 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 #main {
 	height:100%;
-	margin-top: 50px;
+	// margin-top: 50px;
 }
+
+
 
 #footer {
 	margin-top: 30px;
@@ -31,6 +101,15 @@ h1, .h1, h2, .h2, h3, .h3 {
 	color: #777777;
 	position: relative;
 	z-index:1;
+}
+
+.mobile{
+	@media only screen and (orientation: landscape) {
+		@media (max-width: 768px) {
+			width: 50%;
+			float: left;
+		}
+	}
 }
 
 $ani-speed: 2s;
@@ -83,7 +162,7 @@ $ani-delay: 1s;
 }
 
 
-.content-fixed {
+.content-fixed-1 {
 	min-height: 100%;
 	background-size: cover;
 	@media (min-width: 992px) {
@@ -93,12 +172,30 @@ $ani-delay: 1s;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+.parallax-container {
+  position: relative;
+  height: 300px;
+}
+
+.parallax {
+  position: absolute;
+  height: 300%;
+  width: 100%;
+  z-index: -1;
+}
+
+.content-scrool-fixed{
+	padding-top: 50px;
+	height: auto;
+	background-color: white;
+}
 
 .content-scrolling {
 	min-height: 30%;
 	padding: 4em 0;
 	line-height: 1.6;
 	box-shadow: 0 0 50px rgba(#000, .5);
+	background-color: white;
 }
 
 .element-center{

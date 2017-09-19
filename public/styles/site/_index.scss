@@ -40,11 +40,25 @@
 	.text-inter{
 		h1{
 			color: white !important;
+			text-align: center;
+			text-transform: uppercase;
+			text-shadow: 2px 2px 0 rgba(0,0,0,.3);
+	-webkit-text-shadow: 2px 2px 0 rgba(0,0,0,.3);
+	-moz-text-shadow: 2px 2px 0 rgba(0,0,0,.3);
 		}
 	}
 	.title-article-index{
 		h2{
 			padding-bottom: 30px;
+		}
+	}
+
+	.last-photos{
+		img{
+			height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    margin-bottom: 35px;
 		}
 	}
 }
