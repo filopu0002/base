@@ -1,8 +1,21 @@
-#index {
+.index {
 	height: 100%;
 	position: relative;
 	z-index: 2;
 
+	.title-top{
+		padding-top: 280px !important;
+		h1, h2{
+
+			color: white !important;
+			text-align: center;
+			text-transform: uppercase;
+			text-shadow: 2px 2px 0 rgba(0,0,0,.3);
+			-webkit-text-shadow: 2px 2px 0 rgba(0,0,0,.3);
+			-moz-text-shadow: 2px 2px 0 rgba(0,0,0,.3);
+		}
+
+	}
 	section {
 		.container {
 			h1, h2{
