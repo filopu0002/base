@@ -38,7 +38,9 @@
 
 						<div class="place-date">
 							{{{categoryList categories }}}
-							<span class="date"> 23 juillet 2016 </span>
+							{{# each data.date}}
+								<span class="date"> {{publishedDate}} </span>
+							{{/each}}
 						</div>
 						<div class="content-brief">
 							<a href="{{postUrl slug}}">

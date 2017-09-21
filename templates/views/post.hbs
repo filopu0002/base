@@ -1,7 +1,21 @@
 <div class="post-page">
 	<div class="cover" id="coverPost">
     	{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image }}}">{{/if}}
-			<div class="title"> {{data.post.title}} </div>
+			<div class="block-cover">
+				<div class="title"> {{data.post.title}} </div>
+				<div class="post-info-top">
+					<div class="date">{{data.date}}</div>
+					<div class="place">
+						<span>|</span>
+						<a href="{{destinationsUrl data.pays}}"> {{data.pays}} </a>
+						{{#if data.post.ville}}  - data.post.ville{{/if}}
+					</div>
+					<div class="author">
+						<span>|</span>
+						par {{data.post.author.name.first}}
+					</div>
+				</div>
+			</div>
 
 	</div>
 
@@ -11,25 +25,41 @@
 			<span class="arrow arrow-2"></span>
 
 	</a>
-	<section class="content-scrolling-post" id="content-post">
+	<section class="content-scrolling-post" id="link">
 		<!-- <div class="container"> -->
 			<!-- <div class="row">
 				<div class="col-sm-2 col-md-12"> -->
 					<article>
 
 
+						<!-- <div class="row"> -->
+							<div class="col-md-12">
 
-							<h5>
-								{{{categoryList data.post.categories prefix="Posted in "}}}
-								{{#if author.name.first}}by {{author.name.first}}{{/if}}
+								<div class="col-md-2 block-info">
+									<div class="info">
+										<h5>Ecrit le {{data.date}}</h5>
+										<h5>par {{data.post.author.name.first}} </h5>
 
-								<a href="{{destinationsUrl data.pays}}"> {{data.pays}}
-								</a>
+									</div>
+									<div class="info">
+										<h5>Pays : <a href="{{destinationsUrl data.pays}}"> {{data.pays}} </a>
+										{{#if data.post.ville}} <h5>Ville : {{data.post.ville}}</h5> {{/if}}
+									</div>
 
-							</h5>
-						<div class="post">
-							{{{data.post.content.extended}}}
-						</div>
+									<!-- <h5> -->
+
+										<!-- {{#if author.name.first}}by {{/if}} -->
+									<!-- </h5> -->
+								</div>
+								<div class="col-md-8">
+									<div class="post">
+										{{{data.post.content.extended}}}
+									</div>
+								</div>
+								<div class="col-md-2">
+								</div>
+							</div>
+						<!-- </div> -->
 					</article>
 					{{#if data}}
 					  <script type="text/javascript">

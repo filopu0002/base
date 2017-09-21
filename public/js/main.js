@@ -1,10 +1,77 @@
 
+
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+  // if( screen.width <= 1025) {
+    $("#coverPost img").css({
+      transform: 'translate3d(-50%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/25)/100+')',
+    });
+  // }
+  // else{
+  //   $("#coverPost img").css({
+  //     transform: 'translate3d(0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/25)/100+')',
+  //   });
+  // }
+
+});
+
+
+  $(function () {
+    $(document).scroll(function () {
+  	  var $nav = $(".navbar-fixed-top");
+  	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  	});
+  });
+
+if( screen.width <= 1023) {
+$(".map").remove();
+
+  var didScroll;
+  var lastScrollTop = 0;
+  var delta = 10;
+  var navbarHeight = $('header').outerHeight();
+
+  $(window).scroll(function(event){
+      didScroll = true;
+  });
+
+  setInterval(function() {
+      if (didScroll) {
+          hasScrolled();
+          didScroll = false;
+      }
+  }, 250);
+
+  function hasScrolled() {
+      var st = $(this).scrollTop();
+
+      // Make sure they scroll more than delta
+      if(Math.abs(lastScrollTop - st) <= delta)
+          return;
+
+      // If they scrolled down and are past the navbar, add class .nav-up.
+      // This is necessary so you never see what is "behind" the navbar.
+      if (st > lastScrollTop && st > navbarHeight){
+          // Scroll Down
+          $('header').removeClass('nav-down').addClass('nav-up');
+      } else {
+          // Scroll Up
+          if(st + $(window).height() < $(document).height()) {
+              $('header').removeClass('nav-up').addClass('nav-down');
+          }
+      }
+
+      lastScrollTop = st;
+  }
+
+}
+
   var userFeed = new Instafeed({
   get: 'user',
   userId: '37460794',
   accessToken: '37460794.c9aadc8.a2b34f53c98c4d19a10ecd5f8182e25a',
   limit: '6',
-  template: '<div class="col-sm-6 col-md-4"> <a href="{{link}}"><img src="{{image}}" /></a> </div>',
+  template: '<div class="col-xs-6 col-sm-6 col-md-4 mobile-photos"> <a href="{{link}}"><img src="{{image}}" /></a> </div>',
   resolution: 'standard_resolution'
   });
   userFeed.run();
@@ -27,3 +94,15 @@
     });
 
   });
+
+  $("#icon").click(function() {
+       $('html, body').animate({
+           scrollTop: $("#link").offset().top
+       }, 1500);
+   });
+
+
+  if(window.location.pathname == "/blog" || window.location.pathname == "/destinations"){
+    $(".nav-link").addClass("navbar-change-js");
+    $(".navbar-brand").addClass("navbar-change-js");
+  }

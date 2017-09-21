@@ -82,8 +82,12 @@ exports = module.exports = function(req, res) {
 
 		q.exec(function(err, results) {
 			console.log("6");
-			console.log("RESULTS _______Q", results);
+
 			locals.data.posts = results;
+			
+			// locals.data.posts.publishedDate = null;
+			// console.log("RESULTS _______Q", locals.data.posts);
+			//console.log("locals.data.posts._.publishedDate.format('DD MMMM YYYY')", locals.data.posts._.publishedDate.format('DD MMMM YYYY'));
 			next(err);
 		});
 	});

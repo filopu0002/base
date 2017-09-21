@@ -3,8 +3,21 @@
 	position: relative;
 	z-index: 2;
 
+	.icon {
+		position: absolute;
+		padding: 20px 0 20px 0;
+		width: 100vh;
+		text-align: center;
+		width: 100%;
+		color: #fff;
+		bottom: 0;
+		font-size: 50px;
+	}
 	.title-top{
-		padding-top: 280px !important;
+		padding-top: 190px !important;
+		@media (min-width: 768px) {
+			padding-top: 280px !important;
+		}
 		h1, h2{
 
 			color: white !important;
@@ -65,13 +78,25 @@
 			padding-bottom: 30px;
 		}
 	}
-
+	.mobile-photos{
+		padding-left: 5px !important;
+    padding-right: 5px !important;
+	}
 	.last-photos{
 		img{
-			height: 350px;
-    width: 350px;
-    border-radius: 10px;
-    margin-bottom: 35px;
+			@media (min-width: 768px) {
+				height: 350px;
+		    width: 350px;
+		    border-radius: 10px;
+		    margin-bottom: 35px;
+			}
+			@media (max-width: 766px) {
+				height: 150px;
+		    width: 150px;
+		    border-radius: 10px;
+		    margin-bottom: 10px;
+			}
 		}
 	}
+
 }

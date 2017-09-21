@@ -14,6 +14,7 @@ exports = module.exports = function(req, res) {
 		posts: [],
 		continent: [],
 		pays: [],
+		date: [],
 	};
 
 	// Load the current post
@@ -25,9 +26,16 @@ exports = module.exports = function(req, res) {
 		}).populate('author categories pays');
 
 		q.exec(function(err, result) {
-			console.log('result', result);
+			//item._.createdDate.format('YYYY-MM-DD')
 
 			locals.data.post = result;
+			locals.data.date = locals.data.post._.publishedDate.format('DD MMMM YYYY');
+
+
+			//console.log('result', locals.data.post.publishedDate);
+		//	var dateR = locals.data.post.publishedDate;
+			//var dateSplit = dateR.split("-")
+		//	console.log("DATE______ ", dateR);
 			if(locals.data.post!= null && locals.data.post.pays!= null && locals.data.post.pays[0]){
 				locals.data.pays = locals.data.post.pays[0].key;
 			}
@@ -63,7 +71,7 @@ exports = module.exports = function(req, res) {
 
 		q.exec(function(err, results) {
 			locals.data.posts = results;
-			console.log("resuls ------------------------", results);
+			//console.log("resuls ------------------------", locals.data.posts);
 			next(err);
 		});
 
