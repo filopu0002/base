@@ -43,7 +43,7 @@
             display: inline;
             color: white;
             font-size: 22px;
-            @media (max-width: 768px) {
+            @media (max-width: 576px) {
               font-size: 11px;
             }
             text-shadow: 2px 2px 0 rgba(0,0,0,.3);
@@ -61,7 +61,7 @@
         }
         .title{
           font-size: 5em;
-          @media (max-width: 768px) {
+          @media (max-width: 576px) {
             font-size: 1.5em;
           }
 

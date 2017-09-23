@@ -23,8 +23,8 @@ $(window).scroll(function() {
   	});
   });
 
-if( screen.width <= 1023) {
-$(".map").remove();
+if( screen.width <= 700){
+  $(".map").remove();
 
   var didScroll;
   var lastScrollTop = 0;
