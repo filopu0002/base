@@ -68,8 +68,8 @@ $(".map").remove();
 
   var userFeed = new Instafeed({
   get: 'user',
-  userId: '37460794',
-  accessToken: '37460794.c9aadc8.a2b34f53c98c4d19a10ecd5f8182e25a',
+  userId: '6068971069',
+  accessToken: '6068971069.f6cc1cf.74eecbed73de4719a4245df262e5c568',
   limit: '6',
   template: '<div class="col-xs-6 col-sm-6 col-md-4 mobile-photos"> <a href="{{link}}"><img src="{{image}}" /></a> </div>',
   resolution: 'standard_resolution'
