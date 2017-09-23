@@ -174,7 +174,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 	}
 }
 .footer-change-js{
-	margin-top: -50px !important;
+	margin-top: -50px;
 }
 
 .mobile{
@@ -327,13 +327,24 @@ a:hover {
 .btnArticle{
   display: flex;
   justify-content: center;
+	a{
+		color: #3e3e3e;
+	}
   .btn{
-    border: 1px solid white;
+    border: 1px solid #071c2c;
     padding: 6px 12px;
     background-color: white;
   }
 
 }
+.btnArticle:hover{
+	.btn{
+		background: #3e3e3e;
+		color: white !important;
+  }
+
+}
+
 .image-ar{
 	object-fit: cover;
 }
