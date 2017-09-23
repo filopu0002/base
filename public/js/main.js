@@ -102,7 +102,7 @@ $(".map").remove();
    });
 
 
-  if(window.location.pathname == "/blog" || window.location.pathname == "/destinations"){
+  if(window.location.pathname == "/blog" || window.location.pathname == "/destinations" || window.location.pathname == "/a-propos"){
     $(".nav-link").addClass("navbar-change-js");
     $(".navbar-brand").addClass("navbar-change-js");
   }

@@ -7,27 +7,23 @@ exports = module.exports = function(req, res) {
 
 	// Set locals
 	locals.section = 'aPropos';
-	// locals.filters = {
-	// 	post: req.params.post,
-	// };
-	// locals.data = {
-	// 	posts: [],
-	// };
 
-	// Load the current post
-	// view.on('init', function(next) {
-  //
-	// 	var q = keystone.list('Post').model.findOne({
-	// 		state: 'published',
-	// 		slug: locals.filters.post,
-	// 	}).populate('author categories');
-  //
-	// 	q.exec(function(err, result) {
-	// 		locals.data.post = result;
-	// 		next(err);
-	// 	});
-  //
-	// });
+	locals.data = {
+		aPropos: [],
+	};
+	view.on('init', function(next) {
+
+		var q = keystone.list('aPropos').model.findOne({
+			state: 'published',
+		});
+
+		q.exec(function(err, result) {
+			locals.data.aPropos = result;
+			console.log("------- A PROPOS-------", result);
+			next(err);
+		});
+
+	});
 
 	// Load other posts
 	// view.on('init', function(next) {

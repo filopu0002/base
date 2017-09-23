@@ -22,8 +22,8 @@
 		              <div class="caption">
 
 										<div class="place-date">
-											{{{categoryList categories }}}
-											<span class="date"> 23 juillet 2016 </span>
+											<a href="{{destinationsUrl data.pays}}"> {{data.pays}} -  </a>
+											<span class="date"> {{{dateArticle}}} </span>
 										</div>
 										<div class="content-brief">
 											<a href="{{postUrl slug}}">
@@ -50,8 +50,10 @@
 					{{/each}}
 				</div>
 			</div> -->
+			{{>pagination}}
 		</div>
 
 	{{debug}}
-	{{>pagination}}
+
+	{{> footer}}
 </div>

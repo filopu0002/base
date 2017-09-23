@@ -37,10 +37,8 @@
 					<div class="caption">
 
 						<div class="place-date">
-							{{{categoryList categories }}}
-							{{# each data.date}}
-								<span class="date"> {{publishedDate}} </span>
-							{{/each}}
+
+								<span class="date"> {{{dateArticle}}} </span>
 						</div>
 						<div class="content-brief">
 							<a href="{{postUrl slug}}">
@@ -58,4 +56,5 @@
       {{/each}}
     </div>
   </div>
+	{{> footer}}
 </div>

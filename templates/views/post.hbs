@@ -7,8 +7,8 @@
 					<div class="date">{{data.date}}</div>
 					<div class="place">
 						<span>|</span>
-						<a href="{{destinationsUrl data.pays}}"> {{data.pays}} </a>
-						{{#if data.post.ville}}  - data.post.ville{{/if}}
+						{{#if data.post.ville}}{{data.post.ville}} - {{/if}}
+						<a href="{{destinationsUrl data.pays}}">{{data.pays}} </a>
 					</div>
 					<div class="author">
 						<span>|</span>
@@ -42,8 +42,8 @@
 
 									</div>
 									<div class="info">
-										<h5>Pays : <a href="{{destinationsUrl data.pays}}"> {{data.pays}} </a>
 										{{#if data.post.ville}} <h5>Ville : {{data.post.ville}}</h5> {{/if}}
+										<h5>Pays : <a href="{{destinationsUrl data.pays}}"> {{data.pays}} </a>
 									</div>
 
 									<!-- <h5> -->
@@ -67,8 +67,8 @@
 					    var postSlug = '{{data.post.slug}}';
 					  </script>
 					{{/if}}
-
-					<div id="disqus_thread"></div>
+					<h2> Commentaires </h2>
+					<div class="commentaire" id="disqus_thread"></div>
 					<script>
 					/*
 					var disqus_config = function () {
@@ -87,7 +87,11 @@
 				<!-- </div>
 			</div> -->
 		<!-- </div> -->
+		{{> footer}}
 	</section>
+	<section>
+
+</section>
 </div>
 
 

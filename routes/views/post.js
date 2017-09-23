@@ -71,7 +71,7 @@ exports = module.exports = function(req, res) {
 
 		q.exec(function(err, results) {
 			locals.data.posts = results;
-			//console.log("resuls ------------------------", locals.data.posts);
+			console.log("resuls ------------------------", locals.data.post);
 			next(err);
 		});
 

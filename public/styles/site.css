@@ -5844,6 +5844,11 @@ header {
     .navbar-nav > li > a {
       color: #071c2c !important; } }
 
+@media (max-width: 1025px) {
+  .nav > li > a {
+    padding-right: 12px;
+    padding-left: 12px; } }
+
 .navbar-default .navbar-brand {
   color: white !important; }
   @media (max-width: 767px) {
@@ -5864,6 +5869,8 @@ header {
     .navbar {
       background-color: transparent;
       border-color: transparent; } }
+  .navbar i {
+    font-size: 1.3em; }
   .navbar a {
     text-align: left; }
     @media (max-width: 767px) {
@@ -5903,6 +5910,8 @@ header {
     text-shadow: 0px 0px 0 transparent !important;
     -webkit-text-shadow: 0px 0px 0 transparent !important;
     -moz-text-shadow: 0px 0px 0 transparent !important; }
+    .navbar .navbar-change-js .i {
+      color: #071c2c !important; }
 
 @media (min-width: 768px) {
   .navbar-fixed-top.scrolled {
@@ -5929,13 +5938,23 @@ h1, .h1, h2, .h2, h3, .h3 {
 #main {
   height: 100%; }
 
-#footer {
-  margin-top: 30px;
+.footer {
+  margin-top: 20px;
   border-top: 1px solid #eeeeee;
-  padding-top: 30px;
+  padding-top: 20px;
   color: #777777;
+  top: 50px;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  background-color: white; }
+  .footer .c-icon {
+    padding-bottom: 20px; }
+    .footer .c-icon i {
+      margin-left: 8px;
+      font-size: 1.5em; }
+
+.footer-change-js {
+  margin-top: -50px !important; }
 
 @media only screen and (orientation: landscape) and (max-width: 768px) {
   .mobile {
@@ -5996,7 +6015,8 @@ h1, .h1, h2, .h2, h3, .h3 {
   position: absolute;
   height: 300%;
   width: 100%;
-  z-index: -1; }
+  z-index: -1;
+  background-color: white; }
 
 .content-scrool-fixed {
   padding-top: 50px;
@@ -6242,6 +6262,9 @@ a:hover {
     min-height: 420px;
     object-fit: cover; }
 
+#destinations .list-pays {
+  padding-bottom: 74px; }
+
 #destinations .block-pays {
   margin-bottom: 50px; }
   #destinations .block-pays .pays {
@@ -6380,6 +6403,9 @@ a:hover {
         text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
         -webkit-text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
         -moz-text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3); }
+        @media (max-width: 768px) {
+          .post-page .cover .block-cover .post-info-top div {
+            font-size: 11px; } }
       .post-page .cover .block-cover a {
         color: white; }
       .post-page .cover .block-cover a:hover {
@@ -6393,6 +6419,9 @@ a:hover {
         text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
         -webkit-text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
         -moz-text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3); }
+        @media (max-width: 768px) {
+          .post-page .cover .block-cover .title {
+            font-size: 1.5em; } }
   .post-page .icon {
     position: absolute;
     padding: 20px 0 20px 0;
@@ -6444,6 +6473,8 @@ a:hover {
         border-radius: 10px;
         top: 50;
         left: 0; }
+  .post-page h2 {
+    text-align: center; }
 
 .blog {
   line-height: 1.6; }
@@ -6483,3 +6514,9 @@ a:hover {
         margin-bottom: 15px; }
     .blog .article .more {
       text-transform: uppercase; }
+
+.a-propos .container.title {
+  padding-top: 50px;
+  padding-bottom: 30px; }
+  .a-propos .container.title h1 {
+    text-align: center; }

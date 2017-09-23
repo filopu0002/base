@@ -59,31 +59,7 @@ exports = module.exports = function(req, res) {
 
 				locals.data.posts = results;
 
-				//locals.data.posts._.publishedDate.parse('2013-12-04');
-				console.log("json", locals.data.posts.ville);
-
-				//
-				for(j=0; j < locals.data.posts.length; j++){
-					// var str = JSON.stringify(locals.data.posts);
-					//
-					// str = str.replace(/\"_id\":/g, "\"id\":");
-					//
-					// locals.data.posts = JSON.parse(str);
-
-					// locals.data.posts.forEach(function(a) {
-					//     a.publishedDate = a.publishedDate.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
-					// });
-
-					// console.log("locals.data.posts ------------------------------->", locals.data.posts)
-					// console.log("locals.data.posts[j]._.publishedDate.format('DD MMMM YYYY')", locals.data.posts[j]._.publishedDate.format('DD MMMM YYYY'));
-					// locals.data.date.push(locals.data.posts[j]._.publishedDate.format('DD MMMM YYYY'))
-					// console.log("locals.data.posts ------------------------------->", locals.data.date)
-				}
-
-				// console.log("locals.data.posts ------------------------------->", locals.data.posts)
-				//console.log(locals.data.date);
-				//console.log("locals.data.posts", locals.data.posts);
-				//locals.data.date = locals.data.posts._.publishedDate.format('DD MMMM YYYY');
+				 
 				next(err);
 			});
 
