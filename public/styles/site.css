@@ -6464,22 +6464,19 @@ a:hover {
           width: 720px; } }
       @media (max-width: 767px) {
         .post-page .content-scrolling-post .post {
-          margin-left: 5px;
-          margin-right: 5px; } }
+          margin-left: -15px;
+          margin-right: -15px; } }
       .post-page .content-scrolling-post .post p {
         font-size: 1.3em;
         line-height: 1.6;
-        padding-bottom: 20px; }
+        padding-bottom: 10px; }
       .post-page .content-scrolling-post .post img {
-        object-fit: cover;
         width: 100%;
         position: relative;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: 10px;
+        margin-bottom: 2px;
         border-radius: 10px;
-        height: 100%;
-        top: 50;
-        left: 0; }
+        height: 100%; }
   .post-page h2 {
     text-align: center; }
 
