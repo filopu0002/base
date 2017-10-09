@@ -6001,9 +6001,11 @@ h1, .h1, h2, .h2, h3, .h3 {
 .content-fixed-1 {
   min-height: 100%;
   background-size: cover;
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center; }
+  @media (min-width: 1025px) {
+    .content-fixed-1 {
+      background-attachment: fixed; } }
 
 .parallax-container {
   position: relative;
@@ -6475,6 +6477,7 @@ a:hover {
         margin-top: 50px;
         margin-bottom: 50px;
         border-radius: 10px;
+        height: 100%;
         top: 50;
         left: 0; }
   .post-page h2 {
