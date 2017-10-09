@@ -316,9 +316,10 @@ a:hover {
 	box-shadow: none;
 	font-weight: 600;
 	transition: background-color .4s,color .35s;
+	-webkit-tap-highlight-color: #071c2c;
 }
 
-.button-more:hover, .button-more:focus{
+.button-more:hover, .button-more:active{
 	background: #071c2c;
 	color: white !important;
 }
@@ -334,10 +335,11 @@ a:hover {
     border: 1px solid #071c2c;
     padding: 6px 12px;
     background-color: white;
+		-webkit-tap-highlight-color: #3e3e3e;
   }
 
 }
-.btnArticle:hover, .btnArticle:focus{
+.btnArticle:hover, .btnArticle:active{
 	.btn{
 		background: #3e3e3e;
 		color: white !important;
@@ -488,10 +490,10 @@ div{
 		.more{
       text-transform: uppercase;
 			a{
-
+				-webkit-tap-highlight-color: #3e3e3e;
 				color: #008fb8;
 			}
-			a:hover{
+			a:hover, a:active{
 				color: #3e3e3e;
 			}
     }
