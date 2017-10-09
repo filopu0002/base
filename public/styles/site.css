@@ -6070,7 +6070,7 @@ a:hover {
   font-weight: 600;
   transition: background-color .4s,color .35s; }
 
-.button-more:hover {
+.button-more:hover, .button-more:focus {
   background: #071c2c;
   color: white !important; }
 
@@ -6084,7 +6084,7 @@ a:hover {
     padding: 6px 12px;
     background-color: white; }
 
-.btnArticle:hover .btn {
+.btnArticle:hover .btn, .btnArticle:focus .btn {
   background: #3e3e3e;
   color: white !important; }
 

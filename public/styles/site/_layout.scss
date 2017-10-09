@@ -318,7 +318,7 @@ a:hover {
 	transition: background-color .4s,color .35s;
 }
 
-.button-more:hover{
+.button-more:hover, .button-more:focus{
 	background: #071c2c;
 	color: white !important;
 }
@@ -337,13 +337,14 @@ a:hover {
   }
 
 }
-.btnArticle:hover{
+.btnArticle:hover, .btnArticle:focus{
 	.btn{
 		background: #3e3e3e;
 		color: white !important;
   }
 
 }
+
 
 .image-ar{
 	object-fit: cover;
