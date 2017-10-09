@@ -26,7 +26,19 @@
 			text-shadow: 2px 2px 0 rgba(0,0,0,.3);
 			-webkit-text-shadow: 2px 2px 0 rgba(0,0,0,.3);
 			-moz-text-shadow: 2px 2px 0 rgba(0,0,0,.3);
+
 		}
+		h1{
+			@media (max-width: 768px) {
+				font-size: 28px !important;
+			}
+		}
+		h2{
+			@media (max-width: 768px) {
+				font-size: 20px !important; 
+			}
+		}
+
 
 	}
 	section {
