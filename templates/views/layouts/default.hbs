@@ -8,12 +8,23 @@
 	<title>Deux Baroudeurs - Blog de voyage</title>
  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link href="/styles/site.css" rel="stylesheet">
-	 
+
 	{{!-- This file provides the default styling for the KeystoneJS Content Editor
 
 
 			- only renders when user is logged in and admin--}}
 	<link rel="stylesheet" href="/styles/font-awesome/css/font-awesome.min.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107715890-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107715890-2');
+</script>
+
 	{{{isAdminEditorCSS user}}}
 	{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
 		//- Safely remove this block if you are not targeting IE8 --}}
@@ -61,7 +72,6 @@
 		{{{body}}}
 
 	</div>
-	<!-- {{> footer}} -->
 	{{!--
 			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
 			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
@@ -75,8 +85,6 @@
 
 
 	<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
-	<!-- <script src="/js/zoom.js"></script>
-	<script src="/js/downUp.js"></script> -->
 	<script src="/js/insta.js"></script>
 	<script src="/js/main.js"></script>
 	<script type="text/javascript">
