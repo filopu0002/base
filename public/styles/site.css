@@ -6464,6 +6464,8 @@ a:hover {
         text-align: right;
         padding-bottom: 15px;
         margin-bottom: 15px; }
+      .post-page .content-scrolling-post .block-info .ville-pays {
+        text-transform: capitalize; }
     .post-page .content-scrolling-post .post {
       text-align: justify; }
       @media (min-width: 768px) {
