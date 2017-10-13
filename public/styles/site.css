@@ -6083,7 +6083,8 @@ a:hover {
   .btnArticle .btn {
     border: 1px solid #071c2c;
     padding: 6px 12px;
-    background-color: white; }
+    background-color: white;
+    -webkit-tap-highlight-color: #3e3e3e; }
 
 .btnArticle:hover .btn, .btnArticle:active .btn {
   background: #3e3e3e;

@@ -50,6 +50,7 @@ exports = module.exports = function(req, res) {
 	view.on('init', function(next, res) {
 
 		var q = keystone.list('Post').model.find()
+			.where('state', 'published')
 			.sort('-publishedDate')
 			.populate('pays');
 			q.where('pays').in([locals.data.pays]);
@@ -59,7 +60,7 @@ exports = module.exports = function(req, res) {
 
 				locals.data.posts = results;
 
-				 
+
 				next(err);
 			});
 
