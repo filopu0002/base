@@ -4,7 +4,7 @@
 			<div class="block-cover">
 				<div class="title"> {{data.post.title}} </div>
 				<div class="post-info-top">
-					<div class="date">{{{dateArticle}}}</div>
+					<div class="date">{{data.post.dateArticle}}</div>
 					<div class="place">
 						<span>|</span>
 						{{#if data.post.ville}}{{data.post.ville}} - {{/if}}
@@ -37,7 +37,7 @@
 
 								<div class="col-md-2 block-info">
 									<div class="info">
-										<h5>Ecrit le {{{dateArticle}}}</h5>
+										<h5>Ecrit le {{data.post.dateArticle}}</h5>
 										<h5>par {{data.post.author.name.first}} </h5>
 
 									</div>
