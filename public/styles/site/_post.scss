@@ -137,16 +137,21 @@
           padding-bottom: 10px;
         }
         img, iframe{
-          width: 100%;
+
           position: relative;
           margin-top: 10px;
           margin-bottom: 2px;
-          height: 100%;
+
         }
+        iframe{
+          text-align: center !important;
+          max-width: 100%;
+      }
 
         img{
           border-radius: 10px;
-
+          height: 100%;
+            width: 100%;
         }
 
 
