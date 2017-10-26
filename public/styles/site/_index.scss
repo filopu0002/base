@@ -63,13 +63,15 @@
 
 	}
 	section {
+
+
 		.container {
 			h1, h2{
 				text-align: center;
 				color: #071c2c;
 				font-size: 2.25em;
 				@media (max-width: 766px) {
-					font-size: 1.6em !important;
+					font-size: 1.9em !important;
 				}
 
 		    font-weight: 500;
@@ -77,6 +79,13 @@
 		    line-height: 1.25;
 			}
 
+		}
+		.text-inter{
+			h1, h2{
+				@media (max-width: 766px) {
+					font-size: 1.6em !important;
+				}
+			}
 		}
 	}
 
