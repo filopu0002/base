@@ -6532,11 +6532,17 @@ a:hover {
       .post-page .content-scrolling-post .block-info .info {
         overflow: hidden;
         border-bottom: 1px solid #ececec;
-        text-align: right;
+        text-align: center;
         padding-bottom: 15px;
         margin-bottom: 15px; }
+        @media (min-width: 992px) {
+          .post-page .content-scrolling-post .block-info .info {
+            text-align: right; } }
       .post-page .content-scrolling-post .block-info .ville-pays {
         text-transform: capitalize; }
+        @media (min-width: 992px) {
+          .post-page .content-scrolling-post .block-info .ville-pays {
+            display: block; } }
     .post-page .content-scrolling-post .post {
       text-align: justify; }
       @media (min-width: 768px) {

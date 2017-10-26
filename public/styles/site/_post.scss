@@ -124,12 +124,18 @@
       .info{
         overflow: hidden;
         border-bottom: 1px solid #ececec;
-        text-align: right;
+        @media (min-width: 992px) {
+          text-align: right
+        }
+        text-align: center;
         padding-bottom: 15px;
         margin-bottom: 15px;
       }
     .ville-pays{
       text-transform: capitalize;
+        @media (min-width: 992px) {
+      display: block;
+    }
     }
     }
     //.container{
