@@ -29,14 +29,35 @@
 
 		}
 		h1{
-			@media (max-width: 768px) {
-				font-size: 28px !important;
+			font-size: 28px !important;
+			@media (min-width: 768px) {
+				font-size: 31.5px !important;
 			}
+
+			@media (min-width: 992px) {
+				font-size: 33px !important;
+			}
+
+			@media (min-width: 1200px) {
+				font-size: 36px !important;
+ 			}
+
 		}
 		h2{
-			@media (max-width: 768px) {
-				font-size: 20px !important;
+			font-size: 20px !important;
+			@media (min-width: 768px) {
+				font-size: 23.5px !important;
+
+			 }
+
+			@media (min-width: 992px) {
+				font-size: 27px !important;
+ 		}
+
+			@media (min-width: 1200px) {
+				font-size: 30px !important;
 			}
+
 		}
 
 
