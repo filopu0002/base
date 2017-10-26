@@ -42,10 +42,17 @@
         .post-info-top div {
             display: inline;
             color: white;
-            font-size: 22px;
-            @media (max-width: 576px) {
-              font-size: 11px;
+
+            font-size: 11px;
+            @media (min-width: 577px) {
+                font-size: 15px;
             }
+            @media (min-width: 992px) {
+            font-size: 18px;
+            }
+            @media (min-width: 1200px) {
+              font-size: 22px;
+             }
             text-shadow: 2px 2px 0 rgba(0,0,0,.3);
             -webkit-text-shadow: 2px 2px 0 rgba(0,0,0,.3);
             -moz-text-shadow: 2px 2px 0 rgba(0,0,0,.3);

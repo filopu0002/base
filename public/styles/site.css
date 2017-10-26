@@ -6421,13 +6421,19 @@ a:hover {
       .post-page .cover .block-cover .post-info-top div {
         display: inline;
         color: white;
-        font-size: 22px;
+        font-size: 11px;
         text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
         -webkit-text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
         -moz-text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3); }
-        @media (max-width: 576px) {
+        @media (min-width: 577px) {
           .post-page .cover .block-cover .post-info-top div {
-            font-size: 11px; } }
+            font-size: 15px; } }
+        @media (min-width: 992px) {
+          .post-page .cover .block-cover .post-info-top div {
+            font-size: 18px; } }
+        @media (min-width: 1200px) {
+          .post-page .cover .block-cover .post-info-top div {
+            font-size: 22px; } }
       .post-page .cover .block-cover a {
         color: white; }
       .post-page .cover .block-cover a:hover {
