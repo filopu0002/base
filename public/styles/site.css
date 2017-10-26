@@ -6115,7 +6115,9 @@ a:hover {
     position: absolute;
     width: 100%;
     top: 10%;
-    left: 0; }
+    left: 0;
+    padding-left: 16px;
+    padding-right: 16px; }
     .main-article .text-article .button {
       display: flex;
       justify-content: center;
@@ -6137,7 +6139,7 @@ a:hover {
 
 .article {
   display: block;
-  height: 460px;
+  height: 490px;
   margin-bottom: 20px;
   background-color: #fff;
   overflow: hidden; }
@@ -6171,7 +6173,9 @@ a:hover {
     .article .caption .content-brief {
       text-align: justify;
       overflow: hidden;
-      height: 110px; }
+      max-height: 110px; }
+      .article .caption .content-brief p {
+        padding: 0px !important; }
       .article .caption .content-brief .content {
         font-family: Graphik, sans-serif !important; }
     .article .caption .place-date {
@@ -6364,7 +6368,7 @@ a:hover {
   padding-top: 30px; }
 
 #pays .article {
-  height: 460px; }
+  height: 490px; }
   #pays .article img {
     height: 200px;
     background-color: #444; }
@@ -6506,7 +6510,7 @@ a:hover {
     .blog .container.title h1, .blog .container.title h3 {
       text-align: center; }
   .blog .article {
-    height: 460px; }
+    height: 490px; }
     .blog .article img {
       height: 200px;
       background-color: #444; }

@@ -379,6 +379,8 @@ a:hover {
     width: 100%;
     top:10%;
     left: 0;
+		padding-left: 16px;
+		padding-right: 16px;
 
     .button{
       display: flex;
@@ -418,7 +420,7 @@ div{
 }
 .article{
   display: block;
-  height: 460px;
+  height: 490px;
   //padding: 4px;
   margin-bottom: 20px;
   //line-height: 1.42857;
@@ -471,14 +473,16 @@ div{
 		}
 		height: 200px;
 		.content-brief{
-
+ 			p{
+				padding: 0px !important;
+			}
 			.content{
 				font-family: Graphik, sans-serif !important;
 			}
 			//margin: 15px;
 			text-align:justify;
 			overflow: hidden;
-			height: 110px;
+			max-height: 110px;
 		}
 		.place-date{
 			text-align: right;
