@@ -6443,10 +6443,7 @@ a:hover {
         -moz-text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3); }
         @media (min-width: 577px) {
           .post-page .cover .block-cover .post-info-top div {
-            font-size: 15px; } }
-        @media (min-width: 992px) {
-          .post-page .cover .block-cover .post-info-top div {
-            font-size: 18px; } }
+            font-size: 19px; } }
         @media (min-width: 1200px) {
           .post-page .cover .block-cover .post-info-top div {
             font-size: 22px; } }
@@ -6465,7 +6462,7 @@ a:hover {
         -moz-text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3); }
         @media (min-width: 577px) {
           .post-page .cover .block-cover .title {
-            font-size: 2.5em; } }
+            font-size: 2.8em; } }
         @media (min-width: 992px) {
           .post-page .cover .block-cover .title {
             font-size: 3.5em; } }

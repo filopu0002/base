@@ -45,11 +45,9 @@
 
             font-size: 11px;
             @media (min-width: 577px) {
-                font-size: 15px;
-            }
-            @media (min-width: 992px) {
-            font-size: 18px;
-            }
+                font-size: 19px;
+             }
+
             @media (min-width: 1200px) {
               font-size: 22px;
              }
@@ -69,7 +67,7 @@
         .title{
          font-size: 1.5em;
           @media (min-width: 577px) {
-            font-size: 2.5em;
+            font-size: 2.8em;
           }
           @media (min-width: 992px) {
             font-size: 3.5em;
