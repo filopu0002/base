@@ -6270,18 +6270,47 @@ a:hover {
   .index .mobile-photos {
     padding-left: 5px !important;
     padding-right: 5px !important; }
-  @media (min-width: 768px) {
-    .index .last-photos img {
-      height: 350px;
-      width: 350px;
-      border-radius: 10px;
-      margin-bottom: 35px; } }
-  @media (max-width: 766px) {
-    .index .last-photos img {
-      height: 150px;
-      width: 150px;
-      border-radius: 10px;
-      margin-bottom: 10px; } }
+  .index .last-photos img {
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 5px; }
+    @media (min-width: 360px) {
+      .index .last-photos img {
+        height: 175px;
+        width: 175px;
+        border-radius: 10px;
+        margin-bottom: 5px; } }
+    @media (min-width: 375px) {
+      .index .last-photos img {
+        height: 180px;
+        width: 180px;
+        border-radius: 10px;
+        margin-bottom: 5px; } }
+    @media (min-width: 410px) {
+      .index .last-photos img {
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+        margin-bottom: 5px; } }
+    @media (min-width: 766px) {
+      .index .last-photos img {
+        height: 360px;
+        width: 360px;
+        border-radius: 10px;
+        margin-bottom: 10px; } }
+    @media (min-width: 992px) {
+      .index .last-photos img {
+        height: 300px;
+        width: 300px;
+        border-radius: 10px;
+        margin-bottom: 20px; } }
+    @media (min-width: 1200px) {
+      .index .last-photos img {
+        height: 350px;
+        width: 350px;
+        border-radius: 10px;
+        margin-bottom: 35px; } }
 
 #destinations .title-top {
   margin-bottom: 50px !important; }

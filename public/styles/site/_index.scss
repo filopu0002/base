@@ -121,17 +121,46 @@
 	}
 	.last-photos{
 		img{
-			@media (min-width: 768px) {
+			height: 150px;
+			width: 150px;
+			border-radius: 10px;
+			margin-bottom: 5px;
+
+			@media (min-width: 360px) {
+				height: 175px;
+				width: 175px;
+				border-radius: 10px;
+				margin-bottom: 5px;
+			}
+			@media (min-width: 375px) {
+				height: 180px;
+				width: 180px;
+				border-radius: 10px;
+				margin-bottom: 5px;
+			}
+			@media (min-width: 410px) {
+				height: 200px;
+		    width: 200px;
+		    border-radius: 10px;
+		    margin-bottom: 5px;
+			 }
+			@media (min-width: 766px) {
+				height: 360px;
+		    width: 360px;
+		    border-radius: 10px;
+		    margin-bottom: 10px;
+			}
+			@media (min-width: 992px) {
+				height: 300px;
+		    width: 300px;
+		    border-radius: 10px;
+		    margin-bottom: 20px;
+			}
+			@media (min-width: 1200px) {
 				height: 350px;
 		    width: 350px;
 		    border-radius: 10px;
 		    margin-bottom: 35px;
-			}
-			@media (max-width: 766px) {
-				height: 150px;
-		    width: 150px;
-		    border-radius: 10px;
-		    margin-bottom: 10px;
 			}
 		}
 	}
