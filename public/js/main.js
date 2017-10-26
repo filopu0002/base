@@ -20,6 +20,12 @@ $(window).scroll(function() {
     $(document).scroll(function () {
   	  var $nav = $(".navbar-fixed-top");
   	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+      var $icon = $('.icon');
+      $icon.toggleClass('disabled', $(this).scrollTop() > $nav.height());
+      var $titlePost = $(".block-cover .title");
+      var $content = $(".content-scrolling-post")
+      $titlePost.toggleClass('hiddenTitle', $(this).scrollTop() > $content.height());
+
   	});
   });
 
@@ -49,8 +55,6 @@ if( screen.width <= 700){
       if(Math.abs(lastScrollTop - st) <= delta)
           return;
 
-      // If they scrolled down and are past the navbar, add class .nav-up.
-      // This is necessary so you never see what is "behind" the navbar.
       if (st > lastScrollTop && st > navbarHeight){
           // Scroll Down
           $('header').removeClass('nav-down').addClass('nav-up');

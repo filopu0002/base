@@ -5938,6 +5938,10 @@ h1, .h1, h2, .h2, h3, .h3 {
 #main {
   height: 100%; }
 
+.icon.disabled {
+  opacity: 0;
+  transition: opacity 0.3s ease-in; }
+
 .footer {
   margin-top: 20px;
   border-top: 1px solid #eeeeee;
@@ -6486,6 +6490,9 @@ a:hover {
         text-shadow: 0px 0px 0 rgba(0, 0, 0, 0.3);
         -webkit-text-shadow: 0px 0px 0 rgba(0, 0, 0, 0.3);
         -moz-text-shadow: 0px 0px 0 rgba(0, 0, 0, 0.3); }
+      .post-page .cover .block-cover .title.hiddenTitle {
+        opacity: 0;
+        transition: opacity 1s ease-in; }
       .post-page .cover .block-cover .title {
         font-size: 1.5em;
         color: #fff;

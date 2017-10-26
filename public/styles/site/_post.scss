@@ -64,6 +64,11 @@
           -webkit-text-shadow: 0px 0px 0 rgba(0,0,0,.3);
           -moz-text-shadow: 0px 0px 0 rgba(0,0,0,.3);
         }
+
+        .title.hiddenTitle{
+          	opacity: 0;
+            transition: opacity 1s ease-in;
+        }
         .title{
          font-size: 1.5em;
           @media (min-width: 577px) {

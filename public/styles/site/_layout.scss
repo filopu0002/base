@@ -154,6 +154,13 @@ h1, .h1, h2, .h2, h3, .h3 {
 	// margin-top: 50px;
 }
 
+.icon.disabled {
+	opacity: 0;
+    transition: opacity 0.3s ease-in;
+
+}
+
+
 
 
 .footer {
