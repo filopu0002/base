@@ -131,10 +131,46 @@
         padding-bottom: 15px;
         margin-bottom: 15px;
       }
+      .author{
+        @media (min-width: 992px) {
+
+      display: block;
+      }
+    }
     .ville-pays{
       text-transform: capitalize;
+      @media (min-width: 250px) {
+    display: block;
+    margin-left: 0px;
+  }
+  @media (min-width: 736px) {
+      display: inline;
+    margin-left: 10px;
+  }
+        @media (min-width: 992px) {
+          padding-top: 15px;
+          margin-top: 15px;
+          margin-left: 0px;
+          border-top: 1px solid #ececec;
+      display: block;
+      }
+      .ville{
+        @media (min-width: 250px) {
+      display: inline;
+      margin-left: 0px;
+        margin-right: 10px;
+    }
+    @media (min-width: 736px) {
+        display: inline;
+      margin-left: 0px;
+      margin-right: 10px;
+    }
         @media (min-width: 992px) {
       display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+
+      }
     }
     }
     }

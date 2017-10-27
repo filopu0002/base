@@ -6538,11 +6538,41 @@ a:hover {
         @media (min-width: 992px) {
           .post-page .content-scrolling-post .block-info .info {
             text-align: right; } }
+      @media (min-width: 992px) {
+        .post-page .content-scrolling-post .block-info .author {
+          display: block; } }
       .post-page .content-scrolling-post .block-info .ville-pays {
         text-transform: capitalize; }
+        @media (min-width: 250px) {
+          .post-page .content-scrolling-post .block-info .ville-pays {
+            display: block;
+            margin-left: 0px; } }
+        @media (min-width: 736px) {
+          .post-page .content-scrolling-post .block-info .ville-pays {
+            display: inline;
+            margin-left: 10px; } }
         @media (min-width: 992px) {
           .post-page .content-scrolling-post .block-info .ville-pays {
+            padding-top: 15px;
+            margin-top: 15px;
+            margin-left: 0px;
+            border-top: 1px solid #ececec;
             display: block; } }
+        @media (min-width: 250px) {
+          .post-page .content-scrolling-post .block-info .ville-pays .ville {
+            display: inline;
+            margin-left: 0px;
+            margin-right: 10px; } }
+        @media (min-width: 736px) {
+          .post-page .content-scrolling-post .block-info .ville-pays .ville {
+            display: inline;
+            margin-left: 0px;
+            margin-right: 10px; } }
+        @media (min-width: 992px) {
+          .post-page .content-scrolling-post .block-info .ville-pays .ville {
+            display: block;
+            margin-left: 0px;
+            margin-right: 0px; } }
     .post-page .content-scrolling-post .post {
       text-align: justify; }
       @media (min-width: 768px) {
