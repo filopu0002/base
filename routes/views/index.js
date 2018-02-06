@@ -45,7 +45,7 @@ console.log("----------------------ok 1");
 
 	});
 		// console.log("------------ RESULT --------------", locals.data.results );
-	});
+	//});
 	// Render the view
 	view.render('index');
 };
