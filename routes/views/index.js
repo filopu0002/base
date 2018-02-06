@@ -24,6 +24,7 @@ exports = module.exports = function(req, res) {
 				},
 			})
 			.sort('-publishedDate')
+			.limit(4)
 			.populate('author');
 
 		q.exec(function(err, results) {
