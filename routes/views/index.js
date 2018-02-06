@@ -16,8 +16,13 @@ exports = module.exports = function(req, res) {
 	};
 
 	view.on('init', function(next) {
-		var q = keystone.list('Post').model.find()
-            .where('state', 'published')
+
+		var q = keystone.list('Post').paginate({
+				page: req.query.page || 1,
+				filters: {
+					state: 'published',
+				},
+			})
 			.sort('-publishedDate')
 			.populate('author');
 
