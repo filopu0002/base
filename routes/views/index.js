@@ -36,7 +36,7 @@ exports = module.exports = function(req, res) {
 			next(err);
 		});*/
 		// console.log("------------ RESULT --------------", locals.data.results );
-	});
+	
 	// Render the view
 	view.render('index');
 };
