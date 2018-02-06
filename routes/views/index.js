@@ -1,5 +1,5 @@
 var keystone = require('keystone');
-
+Post = keystone.list('Post');
 exports = module.exports = function(req, res) {
 
 	var view = new keystone.View(req, res);
@@ -14,9 +14,17 @@ exports = module.exports = function(req, res) {
 		posts: [],
 		categories: [],
 	};
-
-	view.on('init', function(next) {
-		var q = keystone.list('Post').model.find()
+    Post.model.find()
+    .where('state', 'published')
+    .populate('author')
+    .sort('-publishedDate')
+    .limit(4)
+    .exec(function(err, results) {
+        locals.data.posts = results;
+	    next(err);
+    });
+	/* view.on('init', function(next) {
+		var q = keystone.list('Post').find()
             .where('state', 'published')
 			.sort('-publishedDate')
 			.limit(4)
@@ -26,7 +34,7 @@ exports = module.exports = function(req, res) {
 
 			locals.data.posts = results;
 			next(err);
-		});
+		});*/
 		// console.log("------------ RESULT --------------", locals.data.results );
 	});
 	// Render the view
