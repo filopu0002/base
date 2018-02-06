@@ -34,7 +34,7 @@ exports = module.exports = function(req, res) {
 		
 		view.on('init', function (next) {
 console.log("----------------------ok 1");
-		var q = Post.model.find().where('state', 'published').sort('-publishedDate').populate('author').limit(4);
+		var q = Post.model.find().where('state', 'published').sort('-publishedDate').populate('author');
 
 		q.exec(function (err, results) {
 		console.log("----------------------ok 2");
