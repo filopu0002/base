@@ -19,8 +19,7 @@ exports = module.exports = function(req, res) {
 		var q = keystone.list('Post').model.find()
             .where('state', 'published')
 			.sort('-publishedDate')
-			.populate('author')
-			.limit(4);
+			.populate('author');
 
 		q.exec(function(err, results) {
 
