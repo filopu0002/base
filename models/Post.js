@@ -18,7 +18,7 @@ Post.add({
 	publishedDate: { type: Types.Date, default: Date.now, index: true, dependsOn: { state: 'published' } },
 	dateArticle: { type: String},
 	//image: { type: Types.CloudinaryImage,  folder: 'path/to/image' ,select : true, selectPrefix: 'path/to/images' },
-	image: { type: Types.CloudinaryImage, select : true},
+	//image: { type: Types.CloudinaryImage, select : true},
 	content: {
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
