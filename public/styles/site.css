@@ -6588,6 +6588,7 @@ a:hover {
         font-size: 1.3em;
         line-height: 1.6;
         padding-bottom: 10px; }
+     
       .post-page .content-scrolling-post .post img, .post-page .content-scrolling-post .post iframe {
         position: relative;
         margin-top: 10px;
@@ -6597,6 +6598,7 @@ a:hover {
         max-width: 100%; }
       .post-page .content-scrolling-post .post img {
         border-radius: 10px;
+        background: #0cb4ce;
         height: 100%;
         width: 100%; }
   .post-page h2 {
