@@ -37,13 +37,14 @@
 
 						<!-- <div class="row"> -->
 							<div class="col-md-12 col-xs-12 ">
-<h1>
+
+								<div class="col-md-2  block-info">
+<h4>
 <div class="title">
  {{data.post.title}} 
 </div> 
-</h1>
-								<div class="col-md-2  block-info">
-							    <div class="info">
+</h4>
+    <div class="info">
 							      <h5>Ecrit le {{data.post.dateArticle}} <span class="author"> par {{data.post.author.name.first}} </span>
 							      <span class="ville-pays">  {{#if data.post.ville}} <span class="ville">  Ville : {{data.post.ville}} </span> {{/if}}
 							       	Pays : <a href="{{destinationsUrl data.pays}}"> {{data.pays}} </a> </span>
