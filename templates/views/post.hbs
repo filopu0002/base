@@ -2,14 +2,14 @@
 	<div class="cover" id="coverPost">
     	{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image }}}">{{/if}}
 			<div class="block-cover">
-				<div class="title"> {{data.post.title}} </div>
-				<div class="post-info-top">
+				<title> <div class="title"> {{data.post.title}} </div> </title>
+				<time> <div class="post-info-top">
 					<div class="date">{{data.post.dateArticle}}</div>
 					<div class="place">
 						<span>|</span>
 						{{#if data.post.ville}}{{data.post.ville}} - {{/if}}
 						<a href="{{destinationsUrl data.pays}}">{{data.pays}} </a>
-					</div>
+					</div> </time>
 					<div class="author">
 						<span>|</span>
 						par {{data.post.author.name.first}}
