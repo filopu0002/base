@@ -2,7 +2,10 @@
 	<div class="cover" id="coverPost">
     	{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image }}}">{{/if}}
 			<div class="block-cover">
-				<title> <div class="title"> {{data.post.title}} </div> </title>
+				<title> 
+<!-- <div class="title">--> 
+ {{data.post.title}} 
+<!-- </div> --> </title>
 				<time> <div class="post-info-top">
 					<div class="date">{{data.post.dateArticle}}</div>
 					<div class="place">
