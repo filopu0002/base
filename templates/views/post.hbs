@@ -2,7 +2,7 @@
 	<div class="cover" id="coverPost">
     	{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image }}}">{{/if}}
 			<div class="block-cover">
-				
+<description> 				
 <div class="title">
  {{data.post.title}} 
 </div> 
@@ -12,7 +12,7 @@
 						<span>|</span>
 						{{#if data.post.ville}}{{data.post.ville}} - {{/if}}
 						<a href="{{destinationsUrl data.pays}}">{{data.pays}} </a>
-					</div> </time>
+					</div> </time> </description> 
 					<div class="author">
 						<span>|</span>
 						par {{data.post.author.name.first}}
