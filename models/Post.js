@@ -18,14 +18,14 @@ Post.add({
 	publishedDate: { type: Types.Date, default: Date.now, index: true, dependsOn: { state: 'published' } },
 	dateArticle: { type: String},
 	//image: { type: Types.CloudinaryImage,  folder: 'path/to/image' ,select : true, selectPrefix: 'path/to/images' },
-	image: { type: Types.CloudinaryImage, select : true},
+	image: { type: Types.CloudinaryImage},
 	content: {
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
 	},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 	ville: {type: String},
-	pays: { type: Types.Relationship, ref: 'Pays', many: true },
+	pays: { type: Types.Relationship, ref: 'Pays', many: true},
 });
 
 Post.schema.virtual('content.full').get(function () {

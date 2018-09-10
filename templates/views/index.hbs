@@ -20,7 +20,7 @@
 			<span class="title-article-index"><h2> Nos derniers articles </h2></span>
 			<div class="row">
 			{{# each data.posts.results}}
-
+  
 				{{#if @first}}
   				<div class="col-sm-12 main-article">
             <div class="image-article">
@@ -37,7 +37,7 @@
   				</div>
 
          {{else}}
-         <div class="col-sm-6 col-md-4">
+         <div class="col-sm-6 col-md-4 mobile">
 
 					 <div class="article">
 	 					<a href="{{postUrl slug}}" class="image-article">

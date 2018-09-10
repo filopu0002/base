@@ -19,12 +19,15 @@ exports = module.exports = function(req, res) {
 
 		var q = keystone.list('Post').paginate({
 				page: req.query.page || 1,
+				perPage: 4,
+				maxPages: 1,
 				filters: {
 					state: 'published',
 				},
 			})
 			.sort('-publishedDate')
-			.populate('author');
+			.populate('author')
+			.limit(4);
 
 		q.exec(function(err, results) {
 
