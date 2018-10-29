@@ -2,14 +2,17 @@
 	<div class="cover" id="coverPost">
     	{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image }}}">{{/if}}
 			<div class="block-cover">
-				<div class="title"> {{data.post.title}} </div>
-				<div class="post-info-top">
-					<div class="date">{{data.post.dateArticle}}</div>
+<description> 				
+<div class="title">
+ {{data.post.title}} 
+</div> </description>
+				<time> <div class="post-info-top">
+					<description><div class="date">{{data.post.dateArticle}}</div> </description> 
 					<div class="place">
 						<span>|</span>
 						{{#if data.post.ville}}{{data.post.ville}} - {{/if}}
-						<a href="{{destinationsUrl data.pays}}">{{data.pays}} </a>
-					</div>
+						<description><a href="{{destinationsUrl data.pays}}">{{data.pays}} </a></description>
+					</div> </time>
 					<div class="author">
 						<span>|</span>
 						par {{data.post.author.name.first}}
@@ -36,7 +39,7 @@
 							<div class="col-md-12 col-xs-12 ">
 
 								<div class="col-md-2  block-info">
-							    <div class="info">
+    <div class="info">
 							      <h5>Ecrit le {{data.post.dateArticle}} <span class="author"> par {{data.post.author.name.first}} </span>
 							      <span class="ville-pays">  {{#if data.post.ville}} <span class="ville">  Ville : {{data.post.ville}} </span> {{/if}}
 							       	Pays : <a href="{{destinationsUrl data.pays}}"> {{data.pays}} </a> </span>
